@@ -15,9 +15,9 @@ const themeScript = `
 `;
 
 export const metadata: Metadata = {
-  title: "Carlos Cerda | Desarrollo Web, IT y Automatización",
+  title: "Carlos Cerda | Software, IT e Infraestructura",
   description:
-    "Portafolio profesional de Carlos Cerda: desarrollo web, soporte IT, automatización e infraestructura.",
+    "Portafolio profesional de Carlos Cerda, Ingeniero en Sistemas con experiencia en desarrollo de software, IT, datos, automatización e infraestructura.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

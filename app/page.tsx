@@ -103,12 +103,13 @@ export default function Home() {
       <header className="site-header">
         <a className="brand-lockup" href="#inicio" aria-label="Ir al inicio">
           <strong>CC/</strong>
-          <span>Systems + Product</span>
+          <span>CARLOS CERDA</span>
         </a>
         <nav aria-label="Navegación principal">
-          <a href="#proyectos"><span>01</span> Proyectos</a>
-          <a href="#perfil"><span>02</span> Perfil</a>
-          <a href="#experiencia"><span>03</span> Experiencia</a>
+          <a href="#proyectos">Trabajo</a>
+          <a href="#perfil">Perfil</a>
+          <a href="#experiencia">Experiencia</a>
+          <a href="#contacto">Contacto</a>
         </nav>
         <ThemeToggle />
       </header>
@@ -116,61 +117,95 @@ export default function Home() {
       <section className="hero section-accent accent-blue" id="inicio">
         <div className="page-shell hero-layout">
           <div className="hero-copy">
-            <div className="eyebrow-row">
-              <span>PORTFOLIO / 2026</span>
-              <span>QRO, MX</span>
-              <span className="availability"><i /> Disponible</span>
-            </div>
-            <p className="hero-role">Ingeniería en Sistemas · Full Stack · IT</p>
-            <h1>
-              Construyo sistemas.
-              <span>Resuelvo lo que los conecta.</span>
+            <p className="hero-kicker reveal hero-step-1">
+              INGENIERÍA EN SISTEMAS / SOFTWARE + IT
+            </p>
+            <h1 className="reveal hero-step-2">
+              <span>Creo soluciones donde</span>{" "}
+              <span>software, datos e infraestructura</span>{" "}
+              <span>trabajan juntos.</span>
             </h1>
-            <div className="hero-bottom">
-              <p>
-                Soy Carlos Cerda. Combino desarrollo web, infraestructura,
-                datos y automatización para convertir problemas reales en
-                soluciones claras, funcionales y bien organizadas.
-              </p>
-              <div className="hero-actions">
-                <a className="button button-solid" href="#proyectos">
-                  Explorar trabajo <ArrowDown size={17} />
-                </a>
-                <a className="button button-line" href="https://github.com/CharlyCharly33" target="_blank" rel="noreferrer">
-                  GitHub <ArrowUpRight size={17} />
-                </a>
-                <a className="button button-line" href="https://www.linkedin.com/in/carlos-alberto-cerda-sierra-266604256/" target="_blank" rel="noreferrer">
-                  LinkedIn <ArrowUpRight size={17} />
-                </a>
-              </div>
+            <p className="hero-description reveal hero-step-3">
+              Combino desarrollo y tecnología para entender problemas,
+              construir soluciones y mejorar cómo funcionan.
+            </p>
+
+            <div className="hero-actions reveal hero-step-4">
+              <a className="button button-solid hero-primary-action" href="#proyectos">
+                Ver proyectos <ArrowDown size={17} />
+              </a>
+              <a className="button button-line" href="#perfil">
+                Conocer mi perfil <ArrowDown size={17} />
+              </a>
+            </div>
+
+            <div className="hero-socials reveal hero-step-5" aria-label="Perfiles externos">
+              <a href="https://github.com/CharlyCharly33" target="_blank" rel="noreferrer">
+                GitHub <ArrowUpRight size={17} />
+              </a>
+              <a href="https://www.linkedin.com/in/carlos-alberto-cerda-sierra-266604256/" target="_blank" rel="noreferrer">
+                LinkedIn <ArrowUpRight size={17} />
+              </a>
             </div>
           </div>
 
-          <figure className="portrait-block">
-            <div className="portrait-index">CC—01</div>
+          <figure className="portrait-block reveal hero-portrait">
             <div className="portrait-frame">
               <img
                 src="/carlos-cerda-perfil.png"
                 alt="Retrato profesional de Carlos Cerda"
               />
-              <div className="portrait-monogram" aria-hidden="true">CC/</div>
             </div>
-            <figcaption>
-              <span>Carlos Alberto Cerda Sierra</span>
-              <span>Curioso / Constructor / Sistemas</span>
-            </figcaption>
+            <div className="portrait-monogram" aria-hidden="true">CC/</div>
           </figure>
         </div>
-        <div className="hero-marquee" aria-hidden="true">
-          <span>SOFTWARE</span><i>+</i><span>INFRAESTRUCTURA</span><i>+</i>
-          <span>DATOS</span><i>+</i><span>AUTOMATIZACIÓN</span>
+        <a className="scroll-indicator" href="#proceso">
+          <span>CONTINUAR</span>
+          <ArrowDown size={15} aria-hidden="true" />
+        </a>
+      </section>
+
+      <section className="content-section process-section section-accent accent-blue" id="proceso">
+        <div className="page-shell">
+          <header className="section-header process-header reveal">
+            <div className="section-number">01 / CÓMO TRABAJO</div>
+            <h2>Entender antes de construir.</h2>
+            <p>
+              Me gusta conocer el problema, conectar las piezas y convertirlo
+              en una solución clara que pueda seguir mejorando.
+            </p>
+          </header>
+
+          <div className="process-grid line-reveal">
+            <article className="process-step reveal process-step-1">
+              <span>01 / ENTENDER</span>
+              <p>
+                Reviso el contexto, identifico la necesidad y organizo lo que
+                realmente debe resolverse.
+              </p>
+            </article>
+            <article className="process-step reveal process-step-2">
+              <span>02 / CONSTRUIR</span>
+              <p>
+                Conecto software, datos y herramientas para crear una solución
+                funcional y bien estructurada.
+              </p>
+            </article>
+            <article className="process-step reveal process-step-3">
+              <span>03 / MEJORAR</span>
+              <p>
+                Pruebo, documento y ajusto el resultado para que sea más claro,
+                estable y útil.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
       <section className="content-section section-accent accent-orange" id="proyectos">
         <div className="page-shell">
           <header className="section-header reveal">
-            <div className="section-number">01 / TRABAJO</div>
+            <div className="section-number">02 / TRABAJO</div>
             <h2>Proyectos que muestran<br />cómo construyo.</h2>
             <p>
               Productos propios y prácticas seleccionadas por lo que
@@ -178,7 +213,7 @@ export default function Home() {
             </p>
           </header>
 
-          <div className="project-list">
+          <div className="project-list line-reveal">
             {projects.map((project) => (
               <article
                 className={`project-row ${project.featured ? "featured" : ""} reveal`}
@@ -229,7 +264,7 @@ export default function Home() {
       <section className="content-section profile-section section-accent accent-green" id="perfil">
         <div className="page-shell">
           <header className="section-header reveal">
-            <div className="section-number">02 / PERFIL</div>
+            <div className="section-number">03 / PERFIL</div>
             <h2>Curiosidad técnica.<br />Criterio humano.</h2>
             <p>
               Me interesa entender la experiencia, el código y la
@@ -250,7 +285,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="capability-list">
+            <div className="capability-list line-reveal">
               {capabilities.map(({ icon: Icon, title, text }, index) => (
                 <article className="capability-row reveal" key={title}>
                   <span>0{index + 1}</span>
@@ -266,7 +301,7 @@ export default function Home() {
       <section className="content-section section-accent accent-violet" id="experiencia">
         <div className="page-shell">
           <header className="section-header reveal">
-            <div className="section-number">03 / EXPERIENCIA</div>
+            <div className="section-number">04 / EXPERIENCIA</div>
             <h2>De resolver incidencias<br />a construir producto.</h2>
             <p>
               La experiencia técnica también es aprender a escuchar,
@@ -274,7 +309,7 @@ export default function Home() {
             </p>
           </header>
 
-          <div className="experience-list">
+          <div className="experience-list line-reveal">
             <article className="experience-row reveal">
               <div className="experience-icon"><BriefcaseBusiness size={22} /></div>
               <div className="experience-meta"><span>ACTUALIDAD</span><small>Querétaro</small></div>
@@ -327,7 +362,7 @@ export default function Home() {
       <section className="content-section stack-section section-accent accent-red">
         <div className="page-shell">
           <header className="section-header reveal">
-            <div className="section-number">04 / HERRAMIENTAS</div>
+            <div className="section-number">05 / HERRAMIENTAS</div>
             <h2>Un sistema completo<br />necesita más de una capa.</h2>
             <p>
               Elijo las herramientas según el problema, el contexto y la etapa
@@ -335,7 +370,7 @@ export default function Home() {
             </p>
           </header>
 
-          <div className="stack-table">
+          <div className="stack-table line-reveal">
             {stackGroups.map((group, index) => (
               <div className="stack-row reveal" key={group.label}>
                 <span>0{index + 1}</span>
@@ -347,11 +382,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="contact-section section-accent accent-yellow">
+      <section className="contact-section section-accent accent-yellow" id="contacto">
         <div className="page-shell contact-layout reveal">
           <div className="contact-monogram" aria-hidden="true">CC/</div>
           <div>
-            <p className="section-number">05 / CONTACTO</p>
+            <p className="section-number">06 / CONTACTO</p>
             <h2>Construyamos<br />algo que funcione.</h2>
           </div>
           <div className="contact-copy">

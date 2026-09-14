@@ -8,7 +8,7 @@ export function MotionEffects() {
     root.classList.add("motion-ready");
 
     const elements = Array.from(
-      document.querySelectorAll<HTMLElement>(".reveal"),
+      document.querySelectorAll<HTMLElement>(".reveal, .line-reveal"),
     );
 
     const observer = new IntersectionObserver(

@@ -1433,3 +1433,454 @@ h1, h2, p, figure { margin-top: 0; }
   .systems-page .systems-transition-layout > a,
   .systems-page .systems-case-card { transition: none; }
 }
+
+/* Kivonex case study: isolated blueprint-table system. */
+.kivonex-page {
+  --case-copper: var(--software);
+  --case-blue: var(--systems);
+  --case-green: var(--active);
+  --case-panel: color-mix(in srgb, var(--software-surface) 72%, var(--surface));
+  --case-grid: color-mix(in srgb, var(--software) 9%, transparent);
+  min-width: 320px;
+  overflow-x: clip;
+  background:
+    linear-gradient(var(--case-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--case-grid) 1px, transparent 1px),
+    var(--background);
+  background-size: 46px 46px;
+}
+.kivonex-page main { overflow: clip; }
+.kivonex-page button { cursor: pointer; }
+.kivonex-page .project-case-shell { width: min(calc(100% - 56px), 1280px); margin-inline: auto; }
+.kivonex-page .project-case-hero {
+  min-height: calc(100svh - 68px);
+  display: grid;
+  align-items: center;
+  border-bottom: 1px solid var(--line-strong);
+  background:
+    radial-gradient(circle at 78% 35%, var(--software-glow), transparent 29rem),
+    linear-gradient(135deg, transparent 0 67%, var(--case-grid) 67% 67.2%, transparent 67.2%);
+}
+.kivonex-page .project-case-hero-layout { padding-block: clamp(72px, 9vw, 130px); display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(360px, .85fr); gap: clamp(55px, 8vw, 105px); align-items: center; }
+.kivonex-page .project-case-eyebrow,
+.kivonex-page .project-case-section-header > p { color: var(--case-copper); font: 750 .75rem/1.4 var(--font-mono); letter-spacing: .11em; }
+.kivonex-page .project-case-hero h1 { margin: 20px 0 14px; color: var(--case-copper); font-size: clamp(5rem, 11vw, 10.5rem); font-weight: 850; line-height: .77; letter-spacing: -.085em; }
+.kivonex-page .project-case-statement { max-width: 720px; margin-bottom: 22px; font-size: clamp(1.45rem, 2.6vw, 2.35rem); font-weight: 730; line-height: 1.08; letter-spacing: -.035em; }
+.kivonex-page .project-case-description { max-width: 690px; color: var(--muted); font-size: 1.05rem; line-height: 1.7; }
+.kivonex-page .project-case-status { width: max-content; margin-top: 25px; padding: 8px 10px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid color-mix(in srgb, var(--case-green) 55%, var(--line)); color: var(--case-green); font: 750 .75rem/1 var(--font-mono); letter-spacing: .07em; }
+.kivonex-page .project-case-status i { width: 8px; height: 8px; border-radius: 50%; background: var(--case-green); box-shadow: 0 0 12px color-mix(in srgb, var(--case-green) 65%, transparent); }
+.kivonex-page .project-case-actions { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 8px; }
+.kivonex-page .project-case-actions a { min-height: 48px; padding: 0 15px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--line-strong); background: color-mix(in srgb, var(--surface) 55%, transparent); font: 750 .75rem/1 var(--font-mono); text-transform: uppercase; transition: transform .2s ease, color .2s ease, border-color .2s ease, background .2s ease; }
+.kivonex-page .project-case-actions a:first-child { border-color: var(--case-copper); background: var(--case-copper); color: #fff8f2; }
+.kivonex-page .project-case-actions a:hover { transform: translateY(-2px); border-color: var(--case-copper); color: var(--case-copper); }
+.kivonex-page .project-case-actions a:first-child:hover { color: #fff; background: color-mix(in srgb, var(--case-copper) 82%, var(--foreground)); }
+.kivonex-page .project-case-drawing { border: 1px solid var(--line-strong); background: var(--case-panel); box-shadow: 18px 18px 0 var(--case-grid); }
+.kivonex-page .project-case-drawing > header { min-height: 45px; padding-inline: 15px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); color: var(--case-copper); font: 750 .75rem/1 var(--font-mono); }
+.kivonex-page .project-case-mark { position: relative; height: 235px; overflow: hidden; display: grid; place-items: center; border-bottom: 1px solid var(--line); background: radial-gradient(circle, var(--case-grid) 1px, transparent 1.5px); background-size: 17px 17px; }
+.kivonex-page .project-case-mark b { z-index: 2; color: var(--case-copper); font: 850 7.5rem/1 var(--font-mono); letter-spacing: -.15em; }
+.kivonex-page .project-case-mark i { position: absolute; width: 145px; height: 145px; border: 1px solid var(--case-copper); transform: rotate(45deg); }
+.kivonex-page .project-case-mark i:nth-of-type(2) { width: 205px; height: 205px; border-color: var(--case-blue); opacity: .45; }
+.kivonex-page .project-case-mark i:nth-of-type(3) { width: 265px; height: 265px; border-color: var(--line); }
+.kivonex-page .project-case-drawing dl { margin: 0; }
+.kivonex-page .project-case-drawing dl div { min-height: 48px; padding: 10px 15px; display: grid; grid-template-columns: minmax(110px, max-content) minmax(0, 1fr); align-items: center; gap: 10px; border-bottom: 1px solid var(--line); }
+.kivonex-page .project-case-drawing dl div:last-child { border-bottom: 0; }
+.kivonex-page .project-case-drawing dt { color: var(--case-copper); font: 700 .75rem/1 var(--font-mono); }
+.kivonex-page .project-case-drawing dd { min-width: 0; margin: 0; overflow-wrap: anywhere; color: var(--muted); font-size: .82rem; }
+.kivonex-page .project-case-index { position: sticky; top: 68px; z-index: 35; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--background) 94%, var(--surface)); backdrop-filter: blur(14px); }
+.kivonex-page .project-case-index > div { min-height: 50px; display: flex; align-items: center; gap: clamp(16px, 3vw, 38px); overflow-x: auto; scrollbar-width: thin; }
+.kivonex-page .project-case-index a { flex: 0 0 auto; color: var(--muted); font: 700 .75rem/1 var(--font-mono); text-transform: uppercase; }
+.kivonex-page .project-case-index a:hover { color: var(--case-copper); }
+
+.kivonex-page .kivonex-brief,
+.kivonex-page .kivonex-architecture,
+.kivonex-page .kivonex-functional,
+.kivonex-page .kivonex-data,
+.kivonex-page .kivonex-decisions,
+.kivonex-page .kivonex-evolution,
+.kivonex-page .kivonex-method,
+.kivonex-page .kivonex-future { padding-block: clamp(90px, 11vw, 145px); scroll-margin-top: 110px; border-bottom: 1px solid var(--line-strong); }
+.kivonex-page .project-case-section-header { max-width: 930px; margin-bottom: clamp(46px, 6vw, 72px); display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 35px; }
+.kivonex-page .project-case-section-header > p { margin: 7px 0 0; }
+.kivonex-page .project-case-section-header h2 { margin: 0; font-size: clamp(2.7rem, 5vw, 5.3rem); line-height: .92; letter-spacing: -.06em; }
+.kivonex-page .kivonex-brief { background: color-mix(in srgb, var(--software-surface) 42%, transparent); }
+.kivonex-page .kivonex-contrast { display: grid; grid-template-columns: minmax(0, 1fr) 74px minmax(0, 1fr); border: 1px solid var(--line-strong); background: var(--case-panel); }
+.kivonex-page .kivonex-contrast article { min-width: 0; padding: clamp(28px, 4vw, 50px); }
+.kivonex-page .kivonex-contrast article > span { color: var(--muted); font: 800 .75rem/1 var(--font-mono); letter-spacing: .12em; }
+.kivonex-page .kivonex-contrast article > p { min-height: 112px; margin: 23px 0 28px; color: var(--muted); font-size: 1rem; line-height: 1.65; }
+.kivonex-page .kivonex-contrast ul,
+.kivonex-page .kivonex-method-board ul,
+.kivonex-page .kivonex-future-layout > ul { margin: 0; padding: 0; list-style: none; }
+.kivonex-page .kivonex-contrast li { padding: 11px 0; border-top: 1px solid var(--line); }
+.kivonex-page .contrast-kivonex { background: color-mix(in srgb, var(--case-copper) 8%, transparent); }
+.kivonex-page .contrast-kivonex > span { color: var(--case-copper) !important; }
+.kivonex-page .contrast-transfer { display: grid; place-items: center; border-inline: 1px solid var(--line); color: var(--case-copper); }
+.kivonex-page .contrast-transfer svg { transform: rotate(-90deg); }
+.kivonex-page .kivonex-users { margin-top: 18px; padding: 18px 22px; display: grid; grid-template-columns: auto 1fr 1fr; gap: 18px; border-left: 3px solid var(--case-blue); background: color-mix(in srgb, var(--case-blue) 8%, var(--surface)); }
+.kivonex-page .kivonex-users svg { color: var(--case-blue); }
+.kivonex-page .kivonex-users p { margin: 0; color: var(--muted); }
+.kivonex-page .kivonex-users strong { display: block; color: var(--foreground); font: 750 .75rem/1.4 var(--font-mono); text-transform: uppercase; }
+
+.kivonex-page .kivonex-architecture { background: radial-gradient(circle at 80% 30%, var(--systems-glow), transparent 30rem), var(--background); }
+.kivonex-page .project-architecture-board { border: 1px solid var(--line-strong); background: color-mix(in srgb, var(--systems-surface) 58%, var(--surface)); box-shadow: 14px 14px 0 color-mix(in srgb, var(--case-blue) 9%, transparent); }
+.kivonex-page .project-architecture-flow { padding: clamp(25px, 4vw, 46px); display: flex; align-items: stretch; }
+.kivonex-page .project-architecture-step { min-width: 0; flex: 1 1 0; display: flex; align-items: center; }
+.kivonex-page .project-architecture-step button { width: 100%; min-height: 132px; padding: 17px 14px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 8px; border: 1px solid var(--line-strong); background: var(--surface); text-align: left; transition: border-color .2s ease, background .2s ease, box-shadow .2s ease; }
+.kivonex-page .project-architecture-step button > span { color: var(--case-blue); font: 750 .75rem/1 var(--font-mono); }
+.kivonex-page .project-architecture-step button strong { line-height: 1.15; }
+.kivonex-page .project-architecture-step button small { color: var(--muted); font-size: .75rem; line-height: 1.35; }
+.kivonex-page .project-architecture-step button[aria-pressed="true"] { border-color: var(--case-blue); background: color-mix(in srgb, var(--case-blue) 9%, var(--surface)); box-shadow: inset 0 -4px 0 var(--case-blue), 0 0 25px var(--systems-glow); }
+.kivonex-page .project-architecture-arrow { width: 30px; flex: 0 0 30px; display: grid; place-items: center; color: var(--case-blue); }
+.kivonex-page .architecture-arrow-vertical { display: none; }
+.kivonex-page .project-architecture-output { min-height: 112px; padding: 25px clamp(25px, 4vw, 46px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--background) 62%, transparent); }
+.kivonex-page .project-architecture-output span { color: var(--case-blue); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .07em; }
+.kivonex-page .project-architecture-output p { max-width: 820px; margin: 10px 0 0; color: var(--muted); }
+.kivonex-page .project-module-map > header { min-height: 48px; padding-inline: clamp(25px, 4vw, 46px); display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--line); color: var(--case-blue); font: 750 .75rem/1 var(--font-mono); letter-spacing: .07em; }
+.kivonex-page .project-module-map > div { display: grid; grid-template-columns: 1.15fr .85fr; }
+.kivonex-page .project-module-map section { padding: 28px clamp(25px, 4vw, 46px); }
+.kivonex-page .project-module-map section + section { border-left: 1px solid var(--line); }
+.kivonex-page .project-module-map h3 { margin: 0 0 18px; font: 750 .75rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .07em; }
+.kivonex-page .project-module-map ul { margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; list-style: none; }
+.kivonex-page .project-module-map li { padding: 7px 9px; border: 1px solid var(--case-blue); color: var(--case-blue); font: 700 .75rem/1.3 var(--font-mono); }
+.kivonex-page .project-later-modules { background: repeating-linear-gradient(135deg, transparent 0 8px, var(--grid-line) 8px 9px); }
+.kivonex-page .project-later-modules li { border-style: dashed; border-color: var(--line-strong); color: var(--muted); }
+.kivonex-page .kivonex-tech-ledger { margin-top: 28px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--line-strong); }
+.kivonex-page .kivonex-tech-ledger section { padding: 22px; border-right: 1px solid var(--line); }
+.kivonex-page .kivonex-tech-ledger section:last-child { border-right: 0; }
+.kivonex-page .kivonex-tech-ledger h3 { margin: 0 0 15px; color: var(--case-blue); font: 750 .75rem/1.3 var(--font-mono); text-transform: uppercase; }
+.kivonex-page .kivonex-tech-ledger ul { margin: 0; padding: 0; list-style: none; }
+.kivonex-page .kivonex-tech-ledger li { padding: 7px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; }
+
+.kivonex-page .kivonex-functional { background: color-mix(in srgb, var(--surface) 45%, transparent); }
+.kivonex-page .project-status-board { display: grid; grid-template-columns: 1.25fr .75fr .9fr; gap: 14px; align-items: start; }
+.kivonex-page .project-status-column { border: 1px solid var(--line-strong); background: var(--case-panel); }
+.kivonex-page .project-status-column > header { min-height: 58px; padding: 0 19px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--line); }
+.kivonex-page .project-status-column h3 { margin: 0; font: 800 .78rem/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+.kivonex-page .project-status-column > p { min-height: 92px; margin: 0; padding: 20px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .86rem; }
+.kivonex-page .project-status-column ul { margin: 0; padding: 12px 20px 22px; list-style: none; }
+.kivonex-page .project-status-column li { position: relative; padding: 9px 0 9px 20px; border-bottom: 1px solid var(--line); font-size: .88rem; }
+.kivonex-page .project-status-column li::before { content: ""; position: absolute; top: 15px; left: 0; width: 7px; height: 7px; border: 1px solid currentColor; }
+.kivonex-page .project-status-column.is-implemented > header { color: var(--case-green); }
+.kivonex-page .project-status-column.is-implemented li::before { border-color: var(--case-green); background: var(--case-green); }
+.kivonex-page .project-status-column.is-building > header { color: var(--case-copper); }
+.kivonex-page .project-status-column.is-building li::before { border-color: var(--case-copper); }
+.kivonex-page .project-status-column.is-future { border-style: dashed; }
+.kivonex-page .project-status-column.is-future > header { color: var(--muted); }
+
+.kivonex-page .kivonex-data-board { display: grid; grid-template-columns: minmax(0, 1fr) 310px; border: 1px solid var(--line-strong); background: var(--case-panel); }
+.kivonex-page .kivonex-data-model { position: relative; min-height: 510px; overflow: hidden; border-right: 1px solid var(--line-strong); background: radial-gradient(circle, var(--case-grid) 1px, transparent 1.5px); background-size: 18px 18px; }
+.kivonex-page .data-node { position: absolute; z-index: 2; width: 190px; min-height: 110px; padding: 17px; display: grid; grid-template-columns: auto 1fr; align-content: center; gap: 7px 10px; border: 1px solid var(--case-blue); background: var(--surface); box-shadow: 8px 8px 0 var(--systems-glow); }
+.kivonex-page .data-node svg { color: var(--case-blue); }
+.kivonex-page .data-node strong { align-self: center; font-family: var(--font-mono); }
+.kivonex-page .data-node span { grid-column: 1 / -1; color: var(--muted); font-size: .78rem; }
+.kivonex-page .data-internal { top: 45px; left: 6%; }
+.kivonex-page .data-member { left: 6%; bottom: 45px; }
+.kivonex-page .data-plan { top: 45px; right: 6%; }
+.kivonex-page .data-membership { right: 6%; bottom: 45px; width: 250px; border-color: var(--case-copper); }
+.kivonex-page .data-link { position: absolute; z-index: 1; height: 1px; background: var(--case-blue); transform-origin: left; }
+.kivonex-page .data-link-one { top: 105px; left: 27%; width: 48%; transform: rotate(32deg); }
+.kivonex-page .data-link-two { bottom: 100px; left: 27%; width: 47%; }
+.kivonex-page .data-link-three { top: 100px; right: 16%; width: 36%; transform: rotate(90deg); transform-origin: right; }
+.kivonex-page .kivonex-data-concepts { padding: 30px; }
+.kivonex-page .kivonex-data-concepts > span { color: var(--case-copper); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .08em; }
+.kivonex-page .kivonex-data-concepts ul { margin: 24px 0 0; padding: 0; list-style: none; }
+.kivonex-page .kivonex-data-concepts li { padding: 13px 0; border-top: 1px solid var(--line); color: var(--muted); }
+
+.kivonex-page .kivonex-decisions { background: var(--software-surface); }
+.kivonex-page .kivonex-decision-list { margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line-strong); list-style: none; }
+.kivonex-page .kivonex-decision-list li { min-height: 185px; padding: 28px; display: grid; grid-template-columns: 45px 1fr; gap: 15px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.kivonex-page .kivonex-decision-list li:nth-child(even) { border-right: 0; }
+.kivonex-page .kivonex-decision-list > li > span { color: var(--case-copper); font: 750 .75rem/1 var(--font-mono); }
+.kivonex-page .kivonex-decision-list h3 { margin: 0 0 10px; font-size: 1.15rem; }
+.kivonex-page .kivonex-decision-list p { margin: 0; color: var(--muted); }
+
+.kivonex-page .project-evolution-track { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); list-style: none; }
+.kivonex-page .project-evolution-track li { position: relative; min-width: 0; padding-right: 18px; }
+.kivonex-page .project-evolution-track span { color: var(--case-copper); font: 750 .75rem/1 var(--font-mono); text-transform: uppercase; }
+.kivonex-page .project-evolution-track i { position: relative; height: 1px; margin: 25px 0; display: block; background: var(--line-strong); }
+.kivonex-page .project-evolution-track i::before { content: ""; position: absolute; top: -6px; left: 0; width: 13px; height: 13px; border: 2px solid var(--case-green); background: var(--background); }
+.kivonex-page .project-evolution-track p { margin: 0; color: var(--muted); font-size: .86rem; line-height: 1.5; }
+.kivonex-page .project-evolution-track .is-next span { color: var(--case-blue); }
+.kivonex-page .project-evolution-track .is-next i { border-top: 1px dashed var(--case-blue); background: transparent; }
+.kivonex-page .project-evolution-track .is-next i::before { border-color: var(--case-blue); background: var(--case-blue); }
+
+.kivonex-page .kivonex-method { background: radial-gradient(circle at 83% 45%, var(--systems-glow), transparent 30rem), var(--systems-surface); }
+.kivonex-page .kivonex-method-board { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line-strong); background: color-mix(in srgb, var(--surface) 65%, transparent); }
+.kivonex-page .kivonex-method-board article { padding: clamp(26px, 4vw, 42px); border-right: 1px solid var(--line); }
+.kivonex-page .kivonex-method-board article:nth-child(2) { border-right: 0; }
+.kivonex-page .kivonex-method-board article.method-controls { grid-column: 1 / -1; border-top: 1px solid var(--line); border-right: 0; }
+.kivonex-page .kivonex-method-board header { display: flex; align-items: center; gap: 10px; color: var(--case-blue); }
+.kivonex-page .kivonex-method-board h3 { margin: 0; font-size: 1.2rem; }
+.kivonex-page .kivonex-method-board ul { margin-top: 25px; display: flex; flex-wrap: wrap; gap: 7px; }
+.kivonex-page .kivonex-method-board li { padding: 8px 10px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); font: 700 .75rem/1.35 var(--font-mono); }
+.kivonex-page .kivonex-participation { margin-top: 18px; padding: 25px 30px; border-left: 4px solid var(--case-copper); background: color-mix(in srgb, var(--case-copper) 8%, var(--surface)); }
+.kivonex-page .kivonex-participation span { color: var(--case-copper); font: 750 .75rem/1 var(--font-mono); letter-spacing: .08em; }
+.kivonex-page .kivonex-participation p { max-width: 850px; margin: 10px 0 0; }
+
+.kivonex-page .kivonex-future { background: var(--case-panel); }
+.kivonex-page .kivonex-future-layout > ul { margin-left: 215px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line-strong); }
+.kivonex-page .kivonex-future-layout > ul li { min-height: 62px; padding: 17px 20px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--muted); }
+.kivonex-page .kivonex-future-layout > ul li::before { content: "+"; margin-right: 11px; color: var(--case-blue); font-family: var(--font-mono); }
+.kivonex-page .project-case-navigation { margin-block: clamp(60px, 8vw, 100px); display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line-strong); }
+.kivonex-page .project-case-navigation a { min-height: 110px; padding: 25px 30px; display: flex; align-items: center; gap: 16px; transition: color .2s ease, background .2s ease; }
+.kivonex-page .project-case-navigation a + a { justify-content: flex-end; border-left: 1px solid var(--line-strong); text-align: right; }
+.kivonex-page .project-case-navigation a:hover { background: var(--case-copper); color: #fff; }
+.kivonex-page .project-case-navigation span { color: var(--muted); font: 700 .75rem/1.5 var(--font-mono); }
+.kivonex-page .project-case-navigation strong { display: block; color: var(--foreground); font: 800 1.25rem/1.2 var(--font-sans); }
+.kivonex-page .project-case-navigation a:hover span,
+.kivonex-page .project-case-navigation a:hover strong { color: inherit; }
+
+@media (max-width: 1050px) {
+  .kivonex-page .project-case-hero-layout { grid-template-columns: 1fr; }
+  .kivonex-page .project-case-drawing { width: min(640px, 100%); }
+  .kivonex-page .project-status-board { grid-template-columns: 1fr 1fr; }
+  .kivonex-page .project-status-column.is-implemented { grid-column: 1 / -1; }
+  .kivonex-page .project-status-column > p { min-height: 0; }
+  .kivonex-page .kivonex-tech-ledger { grid-template-columns: 1fr 1fr; }
+  .kivonex-page .kivonex-tech-ledger section { border-bottom: 1px solid var(--line); }
+  .kivonex-page .project-evolution-track { grid-template-columns: repeat(3, 1fr); gap: 40px 0; }
+}
+
+@media (max-width: 780px) {
+  .kivonex-page .project-case-shell { width: min(calc(100% - 30px), 1280px); }
+  .kivonex-page .project-case-hero h1 { font-size: clamp(4.2rem, 21vw, 7rem); }
+  .kivonex-page .project-case-actions a { flex: 1 1 200px; }
+  .kivonex-page .project-case-section-header { grid-template-columns: 1fr; gap: 12px; }
+  .kivonex-page .project-case-section-header h2 { font-size: clamp(2.6rem, 12vw, 4.5rem); }
+  .kivonex-page .kivonex-contrast { grid-template-columns: 1fr; }
+  .kivonex-page .contrast-transfer { min-height: 62px; border: 0; border-block: 1px solid var(--line); }
+  .kivonex-page .contrast-transfer svg { transform: none; }
+  .kivonex-page .kivonex-contrast article > p { min-height: 0; }
+  .kivonex-page .kivonex-users { grid-template-columns: auto 1fr; }
+  .kivonex-page .kivonex-users p:last-child { grid-column: 2; }
+  .kivonex-page .project-architecture-flow { flex-direction: column; }
+  .kivonex-page .project-architecture-step { flex-direction: column; }
+  .kivonex-page .project-architecture-step button { min-height: 104px; }
+  .kivonex-page .project-architecture-arrow { width: 100%; height: 32px; }
+  .kivonex-page .architecture-arrow-horizontal { display: none; }
+  .kivonex-page .architecture-arrow-vertical { display: block; }
+  .kivonex-page .project-module-map > div { grid-template-columns: 1fr; }
+  .kivonex-page .project-module-map section + section { border-top: 1px solid var(--line); border-left: 0; }
+  .kivonex-page .project-status-board { grid-template-columns: 1fr; }
+  .kivonex-page .project-status-column.is-implemented { grid-column: auto; }
+  .kivonex-page .kivonex-data-board { grid-template-columns: 1fr; }
+  .kivonex-page .kivonex-data-model { min-height: 0; padding: 24px; display: grid; gap: 34px; border-right: 0; border-bottom: 1px solid var(--line-strong); }
+  .kivonex-page .data-node { position: relative; inset: auto; width: 100%; min-height: 95px; }
+  .kivonex-page .data-link { display: none; }
+  .kivonex-page .kivonex-decision-list { grid-template-columns: 1fr; }
+  .kivonex-page .kivonex-decision-list li { min-height: 0; border-right: 0; }
+  .kivonex-page .project-evolution-track { grid-template-columns: 1fr; gap: 0; }
+  .kivonex-page .project-evolution-track li { padding: 0 0 28px 35px; }
+  .kivonex-page .project-evolution-track i { position: absolute; top: 0; bottom: 0; left: 5px; width: 1px; height: auto; margin: 0; }
+  .kivonex-page .project-evolution-track i::before { top: 0; left: -6px; }
+  .kivonex-page .kivonex-method-board { grid-template-columns: 1fr; }
+  .kivonex-page .kivonex-method-board article { border-right: 0; border-bottom: 1px solid var(--line); }
+  .kivonex-page .kivonex-method-board article.method-controls { grid-column: auto; border-top: 0; }
+  .kivonex-page .kivonex-future-layout > ul { margin-left: 0; grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .kivonex-page .project-case-actions a { width: 100%; flex-basis: 100%; }
+  .kivonex-page .project-case-index > div { width: calc(100% - 20px); }
+  .kivonex-page .project-case-drawing { box-shadow: 8px 8px 0 var(--case-grid); }
+  .kivonex-page .kivonex-users { grid-template-columns: 1fr; }
+  .kivonex-page .kivonex-users p:last-child { grid-column: auto; }
+  .kivonex-page .kivonex-tech-ledger { grid-template-columns: 1fr; }
+  .kivonex-page .kivonex-tech-ledger section { border-right: 0; }
+  .kivonex-page .kivonex-decision-list li { padding: 23px 15px; grid-template-columns: 30px 1fr; }
+  .kivonex-page .project-case-navigation { grid-template-columns: 1fr; }
+  .kivonex-page .project-case-navigation a { min-height: 90px; padding: 20px; }
+  .kivonex-page .project-case-navigation a + a { border-top: 1px solid var(--line-strong); border-left: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kivonex-page .project-case-actions a,
+  .kivonex-page .project-architecture-step button,
+  .kivonex-page .project-case-navigation a { transition: none; }
+}
+
+/* Kivonex blueprint refinements: audited product, implementation and flow. */
+.kivonex-page .kivonex-product,
+.kivonex-page .kivonex-implementation,
+.kivonex-page .kivonex-flow,
+.kivonex-page .kivonex-current,
+.kivonex-page .kivonex-closing {
+  padding-block: clamp(90px, 11vw, 145px);
+  scroll-margin-top: 110px;
+  border-bottom: 1px solid var(--line-strong);
+}
+.kivonex-page .kivonex-product { background: color-mix(in srgb, var(--software-surface) 42%, transparent); }
+.kivonex-page .kivonex-product-brief { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line-strong); background: var(--case-panel); }
+.kivonex-page .kivonex-product-brief article { min-height: 205px; padding: clamp(28px, 4vw, 48px); }
+.kivonex-page .kivonex-product-brief article + article { border-left: 1px solid var(--line-strong); background: color-mix(in srgb, var(--case-copper) 8%, transparent); }
+.kivonex-page .kivonex-product-brief span,
+.kivonex-page .kivonex-participation > span { color: var(--case-copper); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .09em; }
+.kivonex-page .kivonex-product-brief p { max-width: 520px; margin: 25px 0 0; color: var(--muted); font-size: 1.05rem; line-height: 1.7; }
+.kivonex-page .kivonex-product-ledger { margin-top: 16px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 16px; }
+.kivonex-page .kivonex-product-ledger article { padding: clamp(26px, 4vw, 40px); border: 1px solid var(--line-strong); background: var(--case-panel); }
+.kivonex-page .kivonex-product-ledger h3 { margin: 0 0 25px; font-size: 1.25rem; }
+.kivonex-page .kivonex-audience { margin: 0; }
+.kivonex-page .kivonex-audience div { padding: 14px 0; border-top: 1px solid var(--line); }
+.kivonex-page .kivonex-audience dt { color: var(--case-blue); font: 750 .75rem/1.4 var(--font-mono); text-transform: uppercase; }
+.kivonex-page .kivonex-audience dd { margin: 7px 0 0; color: var(--muted); }
+.kivonex-page .kivonex-principles { margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; list-style: none; border-top: 1px solid var(--line); }
+.kivonex-page .kivonex-principles li { padding: 13px 10px 13px 20px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.kivonex-page .kivonex-principles li::before { content: "+"; margin-right: 9px; color: var(--case-copper); font-family: var(--font-mono); }
+.kivonex-page .kivonex-participation h3 { margin: 9px 0; font-size: 1.25rem; }
+.kivonex-page .kivonex-participation p { margin-top: 0; color: var(--muted); }
+.kivonex-page .kivonex-product .kivonex-tech-ledger { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.kivonex-page .kivonex-architecture-board { border: 1px solid var(--line-strong); background: color-mix(in srgb, var(--systems-surface) 58%, var(--surface)); box-shadow: 14px 14px 0 color-mix(in srgb, var(--case-blue) 9%, transparent); }
+.kivonex-page .kivonex-representation-label { min-height: 46px; margin: 0; padding: 0 clamp(24px, 4vw, 44px); display: flex; align-items: center; border-bottom: 1px solid var(--line); color: var(--case-blue); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .07em; }
+.kivonex-page .kivonex-architecture-flow { padding: clamp(24px, 4vw, 44px); display: flex; align-items: stretch; }
+.kivonex-page .kivonex-architecture-step { min-width: 0; flex: 1 1 0; display: flex; align-items: center; }
+.kivonex-page .kivonex-architecture-step button { width: 100%; min-height: 158px; padding: 16px 13px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 8px; border: 1px solid var(--line-strong); background: var(--surface); text-align: left; transition: border-color .2s ease, background .2s ease, box-shadow .2s ease; }
+.kivonex-page .kivonex-architecture-step button > span { color: var(--case-blue); font: 750 .75rem/1 var(--font-mono); }
+.kivonex-page .kivonex-architecture-step button strong { font: 800 .86rem/1.2 var(--font-mono); text-transform: uppercase; }
+.kivonex-page .kivonex-architecture-step button small { color: var(--muted); font-size: .75rem; line-height: 1.35; }
+.kivonex-page .kivonex-architecture-step button em { margin-top: auto; color: var(--muted); font: 700 .75rem/1 var(--font-mono); font-style: normal; }
+.kivonex-page .kivonex-architecture-step button[aria-pressed="true"] { border-color: var(--case-blue); background: color-mix(in srgb, var(--case-blue) 9%, var(--surface)); box-shadow: inset 0 -4px 0 var(--case-blue), 0 0 25px var(--systems-glow); }
+.kivonex-page .kivonex-architecture-step button[aria-pressed="true"] em { color: var(--case-blue); }
+.kivonex-page .kivonex-architecture-arrow { width: 28px; flex: 0 0 28px; display: grid; place-items: center; color: var(--case-blue); }
+.kivonex-page .kivonex-architecture-output { min-height: 155px; padding: 25px clamp(24px, 4vw, 44px); border-top: 1px solid var(--line); background: color-mix(in srgb, var(--background) 62%, transparent); }
+.kivonex-page .kivonex-architecture-output > span { color: var(--case-blue); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .07em; }
+.kivonex-page .kivonex-architecture-output p { max-width: 820px; margin: 13px 0 7px; }
+.kivonex-page .kivonex-architecture-output small { color: var(--muted); font-size: .8rem; }
+.kivonex-page .kivonex-architecture-note { margin: 0; padding: 18px clamp(24px, 4vw, 44px); border-top: 1px solid var(--line); color: var(--muted); font-size: .86rem; }
+
+.kivonex-page .kivonex-implementation { background: color-mix(in srgb, var(--surface) 45%, transparent); }
+.kivonex-page .kivonex-section-intro { max-width: 760px; margin: -30px 0 45px 215px; color: var(--muted); font-size: 1rem; }
+.kivonex-page .kivonex-implementation-map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: start; }
+.kivonex-page .kivonex-zone { border: 1px solid var(--line-strong); background: var(--case-panel); }
+.kivonex-page .kivonex-zone > header { min-height: 82px; padding: 16px 18px; display: grid; grid-template-columns: 34px 1fr; align-items: center; gap: 10px; border-bottom: 1px solid var(--line); }
+.kivonex-page .kivonex-zone > header > span { font: 800 .75rem/1 var(--font-mono); }
+.kivonex-page .kivonex-zone > header p { margin: 0 0 4px; font: 700 .75rem/1.25 var(--font-mono); }
+.kivonex-page .kivonex-zone > header h3 { margin: 0; font-size: 1.05rem; text-transform: uppercase; }
+.kivonex-page .kivonex-zone > p { min-height: 102px; margin: 0; padding: 20px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
+.kivonex-page .kivonex-zone.is-interface > header { color: var(--case-green); }
+.kivonex-page .kivonex-zone.is-interface { border-top: 4px solid var(--case-green); }
+.kivonex-page .kivonex-zone.is-backend > header { color: var(--case-copper); }
+.kivonex-page .kivonex-zone.is-backend { border-top: 4px solid var(--case-copper); }
+.kivonex-page .kivonex-zone.is-next > header { color: var(--case-blue); }
+.kivonex-page .kivonex-zone.is-next { border-top: 4px dashed var(--line-strong); }
+.kivonex-page .kivonex-zone-modules { padding: 12px 20px; }
+.kivonex-page .kivonex-zone-modules section { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.kivonex-page .kivonex-zone-modules h4 { margin: 0 0 6px; font-size: .94rem; }
+.kivonex-page .kivonex-zone-modules p { margin: 0; color: var(--muted); font-size: .8rem; }
+.kivonex-page .kivonex-zone details { border-top: 1px solid var(--line-strong); }
+.kivonex-page .kivonex-zone summary { min-height: 48px; padding: 0 20px; display: flex; align-items: center; color: var(--muted); font: 750 .75rem/1 var(--font-mono); cursor: pointer; }
+.kivonex-page .kivonex-zone details ul { margin: 0; padding: 0 20px 20px; list-style: none; }
+.kivonex-page .kivonex-zone details li { padding: 8px 0 8px 15px; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
+.kivonex-page .kivonex-zone details li::before { content: "·"; margin-left: -15px; margin-right: 10px; color: currentColor; }
+
+.kivonex-page .kivonex-flow { background: radial-gradient(circle at 78% 38%, var(--software-glow), transparent 28rem), var(--software-surface); }
+.kivonex-page .kivonex-flow-board { border: 1px solid var(--line-strong); background: var(--case-panel); }
+.kivonex-page .kivonex-flow-controls { padding: clamp(24px, 4vw, 42px); display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.kivonex-page .kivonex-flow-controls button { min-width: 0; min-height: 132px; padding: 17px 12px; display: flex; flex-direction: column; align-items: flex-start; gap: 13px; border: 1px solid var(--line); border-right: 0; background: var(--surface); text-align: left; transition: color .2s ease, border-color .2s ease, background .2s ease, transform .2s ease; }
+.kivonex-page .kivonex-flow-controls button:last-child { border-right: 1px solid var(--line); }
+.kivonex-page .kivonex-flow-controls button > span { color: var(--case-copper); font: 750 .75rem/1 var(--font-mono); }
+.kivonex-page .kivonex-flow-controls button strong { font: 750 .75rem/1.35 var(--font-mono); text-transform: uppercase; }
+.kivonex-page .kivonex-flow-controls button[aria-pressed="true"] { z-index: 2; border-color: var(--case-copper); background: color-mix(in srgb, var(--case-copper) 10%, var(--surface)); box-shadow: inset 0 -4px 0 var(--case-copper); }
+.kivonex-page .kivonex-flow-output { min-height: 155px; padding: 28px clamp(24px, 4vw, 44px); display: grid; grid-template-columns: auto 1fr; gap: 18px; border-top: 1px solid var(--line); background: color-mix(in srgb, var(--background) 60%, transparent); }
+.kivonex-page .kivonex-flow-output > svg { color: var(--case-copper); }
+.kivonex-page .kivonex-flow-output span { color: var(--case-copper); font: 750 .75rem/1 var(--font-mono); }
+.kivonex-page .kivonex-flow-output h3 { margin: 9px 0 5px; font-size: 1.35rem; }
+.kivonex-page .kivonex-flow-output p { max-width: 760px; margin: 0; color: var(--muted); }
+.kivonex-page .kivonex-rule-register { margin-top: 18px; border: 1px solid var(--line-strong); background: var(--case-panel); }
+.kivonex-page .kivonex-rule-register > header { min-height: 55px; padding: 0 20px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--line); color: var(--case-green); }
+.kivonex-page .kivonex-rule-register h3 { margin: 0; font-size: 1rem; }
+.kivonex-page .kivonex-rule-register ul { margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; list-style: none; }
+.kivonex-page .kivonex-rule-register li { min-height: 62px; padding: 16px 20px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.kivonex-page .kivonex-rule-register li span { margin-right: 13px; color: var(--case-green); font: 750 .75rem/1 var(--font-mono); }
+
+.kivonex-page .kivonex-adr-register { margin: 0; padding: 0; border-top: 1px solid var(--line-strong); list-style: none; }
+.kivonex-page .kivonex-adr-register > li { display: grid; grid-template-columns: 330px minmax(0, 1fr); border-bottom: 1px solid var(--line-strong); }
+.kivonex-page .kivonex-adr-register > li > header { padding: 26px; border-right: 1px solid var(--line); }
+.kivonex-page .kivonex-adr-register > li > header span { color: var(--case-copper); font: 750 .75rem/1 var(--font-mono); letter-spacing: .08em; }
+.kivonex-page .kivonex-adr-register h3 { margin: 10px 0 0; font-size: 1.25rem; }
+.kivonex-page .kivonex-adr-register dl { margin: 0; display: grid; grid-template-columns: 1fr 1fr; }
+.kivonex-page .kivonex-adr-register dl div { padding: 26px; }
+.kivonex-page .kivonex-adr-register dl div + div { border-left: 1px solid var(--line); }
+.kivonex-page .kivonex-adr-register dt { margin-bottom: 9px; color: var(--case-blue); font: 750 .75rem/1 var(--font-mono); text-transform: uppercase; }
+.kivonex-page .kivonex-adr-register dd { margin: 0; color: var(--muted); }
+
+.kivonex-page .kivonex-evolution-track { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); list-style: none; }
+.kivonex-page .kivonex-evolution-track > li { min-width: 0; padding-right: 20px; }
+.kivonex-page .kivonex-evolution-track > li > span { color: var(--case-copper); font: 750 .75rem/1.3 var(--font-mono); text-transform: uppercase; }
+.kivonex-page .kivonex-evolution-track > li > i { position: relative; height: 1px; margin: 24px 0; display: block; background: var(--line-strong); }
+.kivonex-page .kivonex-evolution-track > li > i::before { content: ""; position: absolute; top: -6px; left: 0; width: 13px; height: 13px; border: 2px solid var(--case-green); background: var(--background); }
+.kivonex-page .kivonex-evolution-track ul { margin: 0; padding: 0; list-style: none; }
+.kivonex-page .kivonex-evolution-track ul li { padding: 5px 0; color: var(--muted); font-size: .82rem; }
+.kivonex-page .kivonex-documentation-note { margin-top: 42px; padding: 18px 20px; border-left: 3px solid var(--case-copper); background: var(--case-panel); color: var(--muted); }
+
+.kivonex-page .kivonex-current { background: var(--systems-surface); }
+.kivonex-page .kivonex-current-board { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line-strong); background: color-mix(in srgb, var(--surface) 70%, transparent); }
+.kivonex-page .kivonex-current-board article { padding: clamp(25px, 4vw, 42px); }
+.kivonex-page .kivonex-current-board article + article { border-left: 1px solid var(--line-strong); }
+.kivonex-page .kivonex-current-board header { display: flex; align-items: center; gap: 10px; color: var(--case-green); }
+.kivonex-page .kivonex-current-board article + article header { color: var(--case-blue); }
+.kivonex-page .kivonex-current-board h3 { margin: 0; font-size: 1.2rem; }
+.kivonex-page .kivonex-current-board ul { margin: 25px 0 0; padding: 0; list-style: none; }
+.kivonex-page .kivonex-current-board li { padding: 11px 0; border-top: 1px solid var(--line); color: var(--muted); }
+.kivonex-page .kivonex-status-note { margin-top: 18px; padding: 22px 25px; border: 1px solid var(--case-copper); background: color-mix(in srgb, var(--case-copper) 8%, var(--surface)); color: var(--muted); }
+.kivonex-page .kivonex-status-note strong { color: var(--foreground); }
+.kivonex-page .kivonex-closing { background: radial-gradient(circle at 80% 40%, var(--software-glow), transparent 28rem), var(--case-panel); }
+.kivonex-page .kivonex-closing > div { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 15px 70px; align-items: end; }
+.kivonex-page .kivonex-closing > div > p:first-child { grid-column: 1; color: var(--case-copper); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .09em; }
+.kivonex-page .kivonex-closing h2 { grid-column: 1; margin: 0; font-size: clamp(2.7rem, 5vw, 5.3rem); line-height: .92; letter-spacing: -.06em; }
+.kivonex-page .kivonex-closing > div > p:nth-of-type(2) { grid-column: 1; max-width: 680px; margin: 5px 0 0; color: var(--muted); }
+.kivonex-page .kivonex-closing a { grid-column: 2; grid-row: 2 / 4; min-height: 52px; padding: 0 18px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--case-copper); color: var(--case-copper); font: 750 .75rem/1.3 var(--font-mono); text-transform: uppercase; }
+.kivonex-page .kivonex-closing a:hover { background: var(--case-copper); color: #fff; }
+
+@media (max-width: 1050px) {
+  .kivonex-page .kivonex-implementation-map { grid-template-columns: 1fr 1fr; }
+  .kivonex-page .kivonex-implementation-map > div:last-child { grid-column: 1 / -1; }
+  .kivonex-page .kivonex-zone > p { min-height: 0; }
+  .kivonex-page .kivonex-flow-controls { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .kivonex-page .kivonex-flow-controls button { border-right: 1px solid var(--line); }
+  .kivonex-page .kivonex-adr-register > li { grid-template-columns: 240px 1fr; }
+  .kivonex-page .kivonex-evolution-track { grid-template-columns: repeat(3, 1fr); gap: 38px 0; }
+}
+
+@media (max-width: 780px) {
+  .kivonex-page .kivonex-product-brief,
+  .kivonex-page .kivonex-product-ledger { grid-template-columns: 1fr; }
+  .kivonex-page .kivonex-product-brief article + article { border-top: 1px solid var(--line-strong); border-left: 0; }
+  .kivonex-page .kivonex-product .kivonex-tech-ledger { grid-template-columns: 1fr; }
+  .kivonex-page .kivonex-architecture-flow { flex-direction: column; }
+  .kivonex-page .kivonex-architecture-step { flex-direction: column; }
+  .kivonex-page .kivonex-architecture-step button { min-height: 124px; }
+  .kivonex-page .kivonex-architecture-arrow { width: 100%; height: 32px; }
+  .kivonex-page .kivonex-architecture-arrow .architecture-arrow-horizontal { display: none; }
+  .kivonex-page .kivonex-architecture-arrow .architecture-arrow-vertical { display: block; }
+  .kivonex-page .kivonex-section-intro { margin: -25px 0 35px; }
+  .kivonex-page .kivonex-implementation-map { grid-template-columns: 1fr; }
+  .kivonex-page .kivonex-implementation-map > div:last-child { grid-column: auto; }
+  .kivonex-page .kivonex-flow-controls { grid-template-columns: 1fr; }
+  .kivonex-page .kivonex-flow-controls button { min-height: 78px; }
+  .kivonex-page .kivonex-rule-register ul { grid-template-columns: 1fr; }
+  .kivonex-page .kivonex-rule-register li { border-right: 0; }
+  .kivonex-page .kivonex-adr-register > li { grid-template-columns: 1fr; }
+  .kivonex-page .kivonex-adr-register > li > header { border-right: 0; border-bottom: 1px solid var(--line); }
+  .kivonex-page .kivonex-adr-register dl { grid-template-columns: 1fr; }
+  .kivonex-page .kivonex-adr-register dl div + div { border-top: 1px solid var(--line); border-left: 0; }
+  .kivonex-page .kivonex-evolution-track { grid-template-columns: 1fr; gap: 0; }
+  .kivonex-page .kivonex-evolution-track > li { position: relative; padding: 0 0 32px 35px; }
+  .kivonex-page .kivonex-evolution-track > li > i { position: absolute; top: 0; bottom: 0; left: 5px; width: 1px; height: auto; margin: 0; }
+  .kivonex-page .kivonex-evolution-track > li > i::before { top: 0; left: -6px; }
+  .kivonex-page .kivonex-current-board { grid-template-columns: 1fr; }
+  .kivonex-page .kivonex-current-board article + article { border-top: 1px solid var(--line-strong); border-left: 0; }
+  .kivonex-page .kivonex-closing > div { grid-template-columns: 1fr; }
+  .kivonex-page .kivonex-closing a { grid-column: 1; grid-row: auto; width: 100%; margin-top: 22px; }
+}
+
+@media (max-width: 480px) {
+  .kivonex-page .kivonex-principles { grid-template-columns: 1fr; }
+  .kivonex-page .kivonex-product-brief article { min-height: 0; }
+  .kivonex-page .kivonex-representation-label { padding-block: 12px; }
+  .kivonex-page .kivonex-flow-output { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kivonex-page .kivonex-architecture-step button,
+  .kivonex-page .kivonex-flow-controls button { transition: none; }
+}

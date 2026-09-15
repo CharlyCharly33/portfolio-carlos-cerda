@@ -1884,3 +1884,247 @@ h1, h2, p, figure { margin-top: 0; }
   .kivonex-page .kivonex-architecture-step button,
   .kivonex-page .kivonex-flow-controls button { transition: none; }
 }
+
+/* HabitTrack case study: isolated rhythm/anatomy system. */
+.habittrack-page {
+  --case-copper: var(--software);
+  --case-blue: var(--systems);
+  --case-green: var(--active);
+  --case-panel: color-mix(in srgb, var(--software-surface) 66%, var(--surface));
+  --case-grid: color-mix(in srgb, var(--software) 8%, transparent);
+  min-width: 320px;
+  overflow-x: clip;
+  background:
+    linear-gradient(var(--case-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--case-grid) 1px, transparent 1px),
+    var(--background);
+  background-size: 40px 40px;
+}
+.habittrack-page main { overflow: clip; }
+.habittrack-page button { cursor: pointer; }
+.habittrack-page .project-case-shell { width: min(calc(100% - 56px), 1280px); margin-inline: auto; }
+.habittrack-page .project-case-hero {
+  min-height: calc(100svh - 68px);
+  display: grid;
+  align-items: center;
+  border-bottom: 1px solid var(--line-strong);
+  background:
+    radial-gradient(circle at 22% 30%, var(--software-glow), transparent 26rem),
+    linear-gradient(180deg, transparent 0 62%, var(--case-grid) 62% 62.2%, transparent 62.2%);
+}
+.habittrack-page .project-case-hero-layout { padding-block: clamp(72px, 9vw, 130px); display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(50px, 7vw, 95px); align-items: center; }
+.habittrack-page .project-case-hero-layout > * { min-width: 0; }
+.habittrack-page .project-case-eyebrow,
+.habittrack-page .project-case-section-header > p { color: var(--case-copper); font: 750 .75rem/1.4 var(--font-mono); letter-spacing: .11em; }
+.habittrack-page .project-case-hero h1 { max-width: 100%; margin: 20px 0 14px; color: var(--foreground); font-size: clamp(3.2rem, 6vw, 6rem); font-weight: 850; line-height: .82; letter-spacing: -.07em; }
+.habittrack-page .project-case-hero h1::after { content: ""; display: block; width: 72px; height: 8px; margin-top: 18px; background: var(--case-copper); }
+.habittrack-page .project-case-statement { max-width: 700px; margin-bottom: 22px; font-size: clamp(1.4rem, 2.5vw, 2.2rem); font-weight: 730; line-height: 1.1; letter-spacing: -.03em; }
+.habittrack-page .project-case-description { max-width: 680px; color: var(--muted); font-size: 1.05rem; line-height: 1.7; }
+.habittrack-page .project-case-status { width: max-content; margin-top: 25px; padding: 8px 10px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid color-mix(in srgb, var(--case-copper) 55%, var(--line)); color: var(--case-copper); font: 750 .75rem/1 var(--font-mono); letter-spacing: .07em; }
+.habittrack-page .project-case-status i { width: 8px; height: 8px; border-radius: 50%; background: var(--case-copper); box-shadow: 0 0 12px color-mix(in srgb, var(--case-copper) 60%, transparent); }
+.habittrack-page .project-case-actions { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 8px; }
+.habittrack-page .project-case-actions a { min-height: 48px; padding: 0 15px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--line-strong); background: color-mix(in srgb, var(--surface) 55%, transparent); font: 750 .75rem/1 var(--font-mono); text-transform: uppercase; transition: transform .2s ease, color .2s ease, border-color .2s ease, background .2s ease; }
+.habittrack-page .project-case-actions a:first-child { border-color: var(--case-copper); background: var(--case-copper); color: #fff8f2; }
+.habittrack-page .project-case-actions a:hover { transform: translateY(-2px); border-color: var(--case-copper); color: var(--case-copper); }
+.habittrack-page .project-case-actions a:first-child:hover { color: #fff; background: color-mix(in srgb, var(--case-copper) 82%, var(--foreground)); }
+.habittrack-page .project-case-drawing { border: 1px solid var(--line-strong); background: var(--case-panel); box-shadow: 14px 14px 0 var(--case-grid); }
+.habittrack-page .project-case-drawing > header { min-height: 45px; padding-inline: 15px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); color: var(--case-copper); font: 750 .75rem/1 var(--font-mono); }
+.habittrack-page .habittrack-rhythm { padding: 22px 18px 16px; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; border-bottom: 1px solid var(--line); background: radial-gradient(circle, var(--case-grid) 1px, transparent 1.5px); background-size: 16px 16px; }
+.habittrack-page .habittrack-rhythm i { min-height: 52px; display: grid; place-items: center; border: 1px solid var(--line-strong); background: var(--surface); color: var(--muted); font: 800 .85rem/1 var(--font-mono); font-style: normal; }
+.habittrack-page .habittrack-rhythm i.is-done { border-color: var(--case-green); background: color-mix(in srgb, var(--case-green) 14%, var(--surface)); color: var(--case-green); }
+.habittrack-page .habittrack-rhythm i.is-today { border-color: var(--case-copper); box-shadow: inset 0 -4px 0 var(--case-copper); color: var(--foreground); }
+.habittrack-page .habittrack-rhythm small { grid-column: 1 / -1; margin-top: 6px; color: var(--muted); font: 700 .75rem/1.5 var(--font-mono); }
+.habittrack-page .project-case-drawing dl { margin: 0; }
+.habittrack-page .project-case-drawing dl div { min-height: 48px; padding: 10px 15px; display: grid; grid-template-columns: minmax(110px, max-content) minmax(0, 1fr); align-items: center; gap: 10px; border-bottom: 1px solid var(--line); }
+.habittrack-page .project-case-drawing dl div:last-child { border-bottom: 0; }
+.habittrack-page .project-case-drawing dt { color: var(--case-copper); font: 700 .75rem/1 var(--font-mono); }
+.habittrack-page .project-case-drawing dd { min-width: 0; margin: 0; overflow-wrap: anywhere; color: var(--muted); font-size: .82rem; }
+.habittrack-page .project-case-index { position: sticky; top: 68px; z-index: 35; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--background) 94%, var(--surface)); backdrop-filter: blur(14px); }
+.habittrack-page .project-case-index > div { min-height: 50px; display: flex; align-items: center; gap: clamp(16px, 3vw, 38px); overflow-x: auto; scrollbar-width: thin; }
+.habittrack-page .project-case-index a { flex: 0 0 auto; color: var(--muted); font: 700 .75rem/1 var(--font-mono); text-transform: uppercase; }
+.habittrack-page .project-case-index a:hover { color: var(--case-copper); }
+
+.habittrack-page .habittrack-product,
+.habittrack-page .habittrack-architecture,
+.habittrack-page .habittrack-journey,
+.habittrack-page .habittrack-experience,
+.habittrack-page .habittrack-decisions,
+.habittrack-page .habittrack-evolution,
+.habittrack-page .habittrack-current,
+.habittrack-page .habittrack-evidence,
+.habittrack-page .habittrack-closing { padding-block: clamp(90px, 11vw, 145px); scroll-margin-top: 110px; border-bottom: 1px solid var(--line-strong); }
+.habittrack-page .project-case-section-header { max-width: 930px; margin-bottom: clamp(46px, 6vw, 72px); display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 35px; }
+.habittrack-page .project-case-section-header > p { margin: 7px 0 0; }
+.habittrack-page .project-case-section-header h2 { margin: 0; font-size: clamp(2.6rem, 5vw, 5rem); line-height: .94; letter-spacing: -.055em; }
+.habittrack-page .habittrack-product { background: color-mix(in srgb, var(--software-surface) 40%, transparent); }
+.habittrack-page .habittrack-product-brief { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line-strong); background: var(--case-panel); }
+.habittrack-page .habittrack-product-brief article { min-height: 195px; padding: clamp(28px, 4vw, 46px); }
+.habittrack-page .habittrack-product-brief article + article { border-left: 1px solid var(--line-strong); background: color-mix(in srgb, var(--case-copper) 8%, transparent); }
+.habittrack-page .habittrack-product-brief span { color: var(--case-copper); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .09em; }
+.habittrack-page .habittrack-product-brief p { max-width: 520px; margin: 22px 0 0; color: var(--muted); font-size: 1.05rem; line-height: 1.7; }
+.habittrack-page .habittrack-product-ledger { margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.habittrack-page .habittrack-product-ledger article { padding: clamp(26px, 4vw, 40px); border: 1px solid var(--line-strong); background: var(--case-panel); }
+.habittrack-page .habittrack-product-ledger h3 { margin: 0 0 22px; font-size: 1.25rem; }
+.habittrack-page .habittrack-audience { margin: 0; padding: 0; list-style: none; }
+.habittrack-page .habittrack-audience li { padding: 12px 0 12px 20px; border-top: 1px solid var(--line); color: var(--muted); }
+.habittrack-page .habittrack-audience li::before { content: "→"; margin-left: -20px; margin-right: 10px; color: var(--case-copper); font-family: var(--font-mono); }
+.habittrack-page .habittrack-principles { margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; list-style: none; }
+.habittrack-page .habittrack-principles li { padding: 8px 10px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--muted); font: 700 .75rem/1.35 var(--font-mono); }
+.habittrack-page .habittrack-participation { margin-top: 16px; padding: 26px 30px; border-left: 4px solid var(--case-copper); background: color-mix(in srgb, var(--case-copper) 8%, var(--surface)); }
+.habittrack-page .habittrack-participation > span { color: var(--case-copper); font: 750 .75rem/1 var(--font-mono); letter-spacing: .08em; }
+.habittrack-page .habittrack-participation h3 { margin: 9px 0 14px; font-size: 1.25rem; }
+.habittrack-page .habittrack-participation ul { margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; list-style: none; }
+.habittrack-page .habittrack-participation li { padding: 8px 10px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); font: 700 .75rem/1.35 var(--font-mono); }
+
+.habittrack-page .habittrack-architecture { background: var(--background); }
+.habittrack-page .habittrack-architecture-board { border: 1px solid var(--line-strong); background: var(--case-panel); box-shadow: 14px 14px 0 var(--case-grid); }
+.habittrack-page .habittrack-representation-label { min-height: 46px; margin: 0; padding: 0 clamp(24px, 4vw, 44px); display: flex; align-items: center; border-bottom: 1px solid var(--line); color: var(--case-copper); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .07em; }
+.habittrack-page .habittrack-layer-grid { padding: clamp(24px, 4vw, 42px); display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.habittrack-page .habittrack-layer-grid button { min-width: 0; min-height: 118px; padding: 18px; display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 12px; border: 1px solid var(--line-strong); background: var(--surface); text-align: left; transition: border-color .2s ease, background .2s ease, box-shadow .2s ease; }
+.habittrack-page .habittrack-layer-grid button > span { color: var(--case-copper); font: 750 .75rem/1 var(--font-mono); }
+.habittrack-page .habittrack-layer-grid button strong { font: 800 .95rem/1.25 var(--font-mono); text-transform: uppercase; }
+.habittrack-page .habittrack-layer-grid button em { color: var(--muted); font: 700 .75rem/1 var(--font-mono); font-style: normal; }
+.habittrack-page .habittrack-layer-grid button[aria-pressed="true"] { border-color: var(--case-copper); background: color-mix(in srgb, var(--case-copper) 9%, var(--surface)); box-shadow: inset 0 -4px 0 var(--case-copper); }
+.habittrack-page .habittrack-layer-grid button[aria-pressed="true"] em { color: var(--case-copper); }
+.habittrack-page .habittrack-layer-output { min-height: 200px; padding: 26px clamp(24px, 4vw, 44px); border-top: 1px solid var(--line); background: color-mix(in srgb, var(--background) 60%, transparent); }
+.habittrack-page .habittrack-layer-output > span { color: var(--case-copper); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .07em; }
+.habittrack-page .habittrack-layer-output p { max-width: 800px; margin: 12px 0 16px; }
+.habittrack-page .habittrack-layer-output ul { margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; list-style: none; }
+.habittrack-page .habittrack-layer-output li { padding: 7px 9px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--muted); font: 700 .75rem/1.3 var(--font-mono); }
+.habittrack-page .habittrack-layer-output small { display: block; margin-top: 14px; color: var(--muted); font-size: .8rem; }
+.habittrack-page .habittrack-deploy-strip { margin: 0; min-height: 52px; padding: 0 clamp(24px, 4vw, 44px); display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--line); color: var(--muted); font: 750 .75rem/1.3 var(--font-mono); }
+.habittrack-page .habittrack-deploy-strip > span { color: var(--case-green); }
+.habittrack-page .habittrack-deploy-strip svg { color: var(--case-green); }
+.habittrack-page .habittrack-deploy-vertical { display: none; }
+
+.habittrack-page .habittrack-journey { background: radial-gradient(circle at 80% 35%, var(--software-glow), transparent 28rem), var(--software-surface); }
+.habittrack-page .habittrack-journey-board { border: 1px solid var(--line-strong); background: var(--case-panel); }
+.habittrack-page .habittrack-week-strip { margin: 0; padding: 20px clamp(24px, 4vw, 44px) 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.habittrack-page .habittrack-week-strip i { min-height: 34px; display: grid; place-items: center; border: 1px solid var(--line); color: var(--muted); font: 800 .75rem/1 var(--font-mono); font-style: normal; }
+.habittrack-page .habittrack-week-strip i.is-done { border-color: var(--case-green); color: var(--case-green); background: color-mix(in srgb, var(--case-green) 10%, transparent); }
+.habittrack-page .habittrack-journey-controls { padding: clamp(20px, 3vw, 34px) clamp(24px, 4vw, 44px); display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.habittrack-page .habittrack-journey-controls button { min-width: 0; min-height: 104px; padding: 16px 12px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; border: 1px solid var(--line-strong); background: var(--surface); text-align: left; transition: border-color .2s ease, background .2s ease, box-shadow .2s ease; }
+.habittrack-page .habittrack-journey-controls button > span { color: var(--case-copper); font: 750 .75rem/1 var(--font-mono); }
+.habittrack-page .habittrack-journey-controls button strong { font: 750 .78rem/1.3 var(--font-mono); text-transform: uppercase; }
+.habittrack-page .habittrack-journey-controls button[aria-pressed="true"] { border-color: var(--case-copper); background: color-mix(in srgb, var(--case-copper) 10%, var(--surface)); box-shadow: inset 0 -4px 0 var(--case-copper); }
+.habittrack-page .habittrack-journey-output { min-height: 210px; padding: 26px clamp(24px, 4vw, 44px); border-top: 1px solid var(--line); background: color-mix(in srgb, var(--background) 60%, transparent); }
+.habittrack-page .habittrack-journey-output > span { color: var(--case-copper); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .06em; }
+.habittrack-page .habittrack-journey-output dl { margin: 18px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+.habittrack-page .habittrack-journey-output dl div { padding: 12px 0; border-top: 1px solid var(--line); }
+.habittrack-page .habittrack-journey-output dt { margin-bottom: 6px; color: var(--case-blue); font: 750 .75rem/1 var(--font-mono); text-transform: uppercase; }
+.habittrack-page .habittrack-journey-output dd { margin: 0; color: var(--muted); font-size: .9rem; }
+
+.habittrack-page .habittrack-experience { background: color-mix(in srgb, var(--surface) 45%, transparent); }
+.habittrack-page .habittrack-experience-map { display: grid; gap: 14px; }
+.habittrack-page .habittrack-zone { border: 1px solid var(--line-strong); background: var(--case-panel); }
+.habittrack-page .habittrack-zone > header { min-height: 78px; padding: 16px 22px; display: grid; grid-template-columns: 44px 1fr; align-items: center; gap: 12px; border-bottom: 1px solid var(--line); }
+.habittrack-page .habittrack-zone > header > span { font: 800 .85rem/1 var(--font-mono); }
+.habittrack-page .habittrack-zone > header p { margin: 0 0 4px; font: 700 .75rem/1.3 var(--font-mono); }
+.habittrack-page .habittrack-zone > header h3 { margin: 0; font-size: 1.3rem; text-transform: uppercase; letter-spacing: -.01em; }
+.habittrack-page .habittrack-zone-explanation { margin: 0; padding: 18px 22px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+.habittrack-page .habittrack-zone ul { margin: 0; padding: 8px 22px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 0 36px; list-style: none; }
+.habittrack-page .habittrack-zone li { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.habittrack-page .habittrack-zone li strong { display: block; font-size: .95rem; }
+.habittrack-page .habittrack-zone li span { display: block; margin-top: 4px; color: var(--muted); font-size: .8rem; }
+.habittrack-page .habittrack-zone.is-demo { border-top: 4px solid var(--case-green); }
+.habittrack-page .habittrack-zone.is-demo > header { color: var(--case-green); }
+.habittrack-page .habittrack-zone.is-prototype { border-top: 4px solid var(--case-copper); }
+.habittrack-page .habittrack-zone.is-prototype > header { color: var(--case-copper); }
+.habittrack-page .habittrack-zone.is-next { border-top: 4px dashed var(--line-strong); }
+.habittrack-page .habittrack-zone.is-next > header { color: var(--case-blue); }
+
+.habittrack-page .habittrack-decisions { background: var(--software-surface); }
+.habittrack-page .habittrack-decision-register { margin: 0; padding: 0; border-top: 1px solid var(--line-strong); list-style: none; }
+.habittrack-page .habittrack-decision-register > li { padding: 26px; display: grid; grid-template-columns: 220px minmax(0, 1fr) minmax(0, 1fr); gap: 24px; border-bottom: 1px solid var(--line-strong); }
+.habittrack-page .habittrack-decision-register > li > header span { color: var(--case-copper); font: 750 .75rem/1 var(--font-mono); letter-spacing: .08em; }
+.habittrack-page .habittrack-decision-register h3 { margin: 10px 0 0; font-size: 1.2rem; }
+.habittrack-page .habittrack-decision-register dt { margin-bottom: 8px; color: var(--case-blue); font: 750 .75rem/1 var(--font-mono); text-transform: uppercase; }
+.habittrack-page .habittrack-decision-register dd { margin: 0; color: var(--muted); }
+
+.habittrack-page .habittrack-evolution-track { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; list-style: none; }
+.habittrack-page .habittrack-evolution-track > li { min-width: 0; padding: 18px 16px; border: 1px solid var(--line-strong); background: var(--case-panel); }
+.habittrack-page .habittrack-evolution-track > li > span { color: var(--case-copper); font: 750 .75rem/1.3 var(--font-mono); text-transform: uppercase; }
+.habittrack-page .habittrack-evolution-track > li > i { height: 6px; margin: 16px 0; display: block; background: var(--case-green); }
+.habittrack-page .habittrack-evolution-track ul { margin: 0; padding: 0; list-style: none; }
+.habittrack-page .habittrack-evolution-track ul li { padding: 4px 0; color: var(--muted); font-size: .8rem; }
+.habittrack-page .habittrack-evolution-track .is-next { border-style: dashed; }
+.habittrack-page .habittrack-evolution-track .is-next > span { color: var(--case-blue); }
+.habittrack-page .habittrack-evolution-track .is-next > i { background: repeating-linear-gradient(90deg, var(--case-blue) 0 6px, transparent 6px 10px); }
+
+.habittrack-page .habittrack-current { background: var(--systems-surface); }
+.habittrack-page .habittrack-current-board { display: grid; grid-template-columns: 1fr 1fr 1fr; border: 1px solid var(--line-strong); background: color-mix(in srgb, var(--surface) 70%, transparent); }
+.habittrack-page .habittrack-current-board article { padding: clamp(24px, 3vw, 36px); }
+.habittrack-page .habittrack-current-board article + article { border-left: 1px solid var(--line-strong); }
+.habittrack-page .habittrack-current-board h3 { margin: 0 0 6px; font-size: 1.15rem; }
+.habittrack-page .habittrack-current-board ul { margin: 18px 0 0; padding: 0; list-style: none; }
+.habittrack-page .habittrack-current-board li { padding: 10px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
+.habittrack-page .habittrack-status-note { margin-top: 18px; padding: 22px 25px; border: 1px solid var(--case-copper); background: color-mix(in srgb, var(--case-copper) 8%, var(--surface)); color: var(--muted); }
+.habittrack-page .habittrack-status-note strong { color: var(--foreground); }
+
+.habittrack-page .habittrack-evidence { background: var(--case-panel); }
+.habittrack-page .habittrack-evidence-list { margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line-strong); border-left: 1px solid var(--line-strong); list-style: none; }
+.habittrack-page .habittrack-evidence-list li { padding: 26px; border-right: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); }
+.habittrack-page .habittrack-evidence-list li:last-child { grid-column: 1 / -1; }
+.habittrack-page .habittrack-evidence-list a { min-height: 48px; display: inline-flex; align-items: center; gap: 8px; color: var(--case-copper); font: 800 1.05rem/1.2 var(--font-sans); }
+.habittrack-page .habittrack-evidence-list a:hover { text-decoration: underline; }
+.habittrack-page .habittrack-evidence-list p { margin: 10px 0 8px; color: var(--muted); font-size: .88rem; }
+.habittrack-page .habittrack-evidence-list span { color: var(--muted); font: 700 .75rem/1.4 var(--font-mono); }
+.habittrack-page .habittrack-closing { background: radial-gradient(circle at 20% 40%, var(--software-glow), transparent 26rem), var(--case-panel); }
+.habittrack-page .habittrack-closing > div { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 15px 70px; align-items: end; }
+.habittrack-page .habittrack-closing > div > p:first-child { grid-column: 1; color: var(--case-copper); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .09em; }
+.habittrack-page .habittrack-closing h2 { grid-column: 1; margin: 0; font-size: clamp(2.6rem, 5vw, 5rem); line-height: .94; letter-spacing: -.055em; }
+.habittrack-page .habittrack-closing > div > p:nth-of-type(2) { grid-column: 1; max-width: 680px; margin: 5px 0 0; color: var(--muted); }
+.habittrack-page .habittrack-closing a { grid-column: 2; grid-row: 2 / 4; min-height: 52px; padding: 0 18px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--case-copper); color: var(--case-copper); font: 750 .75rem/1.3 var(--font-mono); text-transform: uppercase; }
+.habittrack-page .habittrack-closing a:hover { background: var(--case-copper); color: #fff; }
+
+@media (max-width: 1050px) {
+  .habittrack-page .project-case-hero-layout { grid-template-columns: 1fr; }
+  .habittrack-page .project-case-drawing { width: min(640px, 100%); }
+  .habittrack-page .habittrack-layer-grid { grid-template-columns: 1fr; }
+  .habittrack-page .habittrack-journey-controls { grid-template-columns: repeat(3, 1fr); }
+  .habittrack-page .habittrack-decision-register > li { grid-template-columns: 1fr 1fr; }
+  .habittrack-page .habittrack-decision-register > li > header { grid-column: 1 / -1; }
+  .habittrack-page .habittrack-evolution-track { grid-template-columns: repeat(3, 1fr); }
+  .habittrack-page .habittrack-current-board { grid-template-columns: 1fr 1fr; }
+  .habittrack-page .habittrack-current-board article:last-child { grid-column: 1 / -1; border-top: 1px solid var(--line-strong); border-left: 0; }
+  .habittrack-page .habittrack-evidence-list { grid-template-columns: 1fr; }
+  .habittrack-page .habittrack-evidence-list li:last-child { grid-column: auto; }
+}
+
+@media (max-width: 780px) {
+  .habittrack-page .project-case-shell { width: min(calc(100% - 30px), 1280px); }
+  .habittrack-page .project-case-hero { min-height: auto; }
+  .habittrack-page .project-case-hero-layout { padding-block: 60px 52px; gap: 36px; }
+  .habittrack-page .project-case-hero h1 { font-size: clamp(2.5rem, 13.5vw, 4rem); }
+  .habittrack-page .project-case-actions a { flex: 1 1 200px; }
+  .habittrack-page .project-case-section-header { grid-template-columns: 1fr; gap: 12px; }
+  .habittrack-page .project-case-section-header h2 { font-size: clamp(2.5rem, 11vw, 4rem); }
+  .habittrack-page .habittrack-product-brief { grid-template-columns: 1fr; }
+  .habittrack-page .habittrack-product-brief article + article { border-top: 1px solid var(--line-strong); border-left: 0; }
+  .habittrack-page .habittrack-product-ledger { grid-template-columns: 1fr; }
+  .habittrack-page .habittrack-journey-controls { grid-template-columns: 1fr; }
+  .habittrack-page .habittrack-journey-controls button { min-height: 76px; }
+  .habittrack-page .habittrack-journey-output dl { grid-template-columns: 1fr; }
+  .habittrack-page .habittrack-zone ul { grid-template-columns: 1fr; }
+  .habittrack-page .habittrack-decision-register > li { grid-template-columns: 1fr; }
+  .habittrack-page .habittrack-decision-register > li dl:last-child { grid-column: auto; }
+  .habittrack-page .habittrack-evolution-track { grid-template-columns: 1fr; }
+  .habittrack-page .habittrack-current-board { grid-template-columns: 1fr; }
+  .habittrack-page .habittrack-current-board article + article { border-top: 1px solid var(--line-strong); border-left: 0; }
+  .habittrack-page .habittrack-closing > div { grid-template-columns: 1fr; }
+  .habittrack-page .habittrack-closing a { grid-column: 1; grid-row: auto; width: 100%; margin-top: 22px; }
+}
+
+@media (max-width: 480px) {
+  .habittrack-page .project-case-actions a { box-sizing: border-box; width: 100%; flex-basis: 100%; }
+  .habittrack-page .project-case-index > div { width: calc(100% - 20px); }
+  .habittrack-page .habittrack-rhythm { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; padding: 18px 12px 14px; }
+  .habittrack-page .habittrack-rhythm i { min-height: 44px; font-size: .78rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .habittrack-page .project-case-actions a,
+  .habittrack-page .habittrack-layer-grid button,
+  .habittrack-page .habittrack-journey-controls button,
+  .habittrack-page .habittrack-evidence-list a { transition: none; }
+}

@@ -24,7 +24,7 @@ export default function DashboardsCasePage() {
   return (
     <QuickProfileProvider>
       <div className="dashboards-page">
-        <SiteHeader />
+        <SiteHeader previous={{ href: "/casos/it-support", label: "IT Support" }} next={{ href: "/casos/automatizacion", label: "Automatización + OCR" }} />
         <main>
           <section className="dashboards-hero" aria-labelledby="dashboards-title">
             <div className="dashboards-shell dashboards-hero-layout">

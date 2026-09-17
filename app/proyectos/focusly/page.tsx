@@ -37,7 +37,7 @@ export default function FocuslyPage() {
   return (
     <QuickProfileProvider>
       <div className="focusly-page">
-        <SiteHeader />
+        <SiteHeader previous={{ href: "/proyectos/armando", label: "Armando" }} />
         <main>
           <section className="project-case-hero" aria-labelledby="project-case-title">
             <div className="project-case-shell project-case-hero-layout">

@@ -45,7 +45,7 @@ export default function HabitTrackPage() {
   return (
     <QuickProfileProvider>
       <div className="habittrack-page">
-        <SiteHeader />
+        <SiteHeader previous={{ href: "/proyectos/kivonex", label: "Kivonex" }} next={{ href: "/proyectos/armando", label: "Armando" }} />
         <main>
           <section className="project-case-hero" id="producto" aria-labelledby="project-case-title">
             <div className="project-case-shell project-case-hero-layout">

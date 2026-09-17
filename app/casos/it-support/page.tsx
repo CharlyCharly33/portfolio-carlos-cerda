@@ -24,7 +24,7 @@ export default function ItSupportCasePage() {
   return (
     <QuickProfileProvider>
       <div className="it-support-page">
-        <SiteHeader />
+        <SiteHeader next={{ href: "/casos/dashboards", label: "Dashboards" }} />
         <main>
           <section className="it-support-hero" aria-labelledby="it-support-title">
             <div className="it-support-shell it-support-hero-layout">

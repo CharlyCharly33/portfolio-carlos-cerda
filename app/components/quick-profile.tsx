@@ -59,40 +59,85 @@ export function QuickProfileProvider({ children }: { children: ReactNode }) {
 
           <div className="profile-dialog-content">
             <div>
-              <h2 id="profile-dialog-title">CARLOS ALBERTO CERDA SIERRA</h2>
-              <p className="profile-degree">Ingeniería en Sistemas Computacionales</p>
+              <h2 id="profile-dialog-title">CARLOS CERDA</h2>
+              <p className="profile-degree">Estudiante de Ingeniería en Sistemas Computacionales con experiencia en Software + Producto e IT + Sistemas.</p>
+              <p className="profile-location">Querétaro, México</p>
             </div>
 
-            <dl className="profile-facts">
-              <div>
-                <dt>Perfil híbrido</dt>
-                <dd>Software · IT · Datos · Infraestructura</dd>
+            <section aria-labelledby="profile-education-title">
+              <h3 id="profile-education-title">FORMACIÓN</h3>
+              <p>Ingeniería en Sistemas Computacionales<br />UVM<br />En curso</p>
+            </section>
+
+            <section aria-labelledby="profile-experience-title">
+              <h3 id="profile-experience-title">EXPERIENCIA</h3>
+              <dl className="profile-facts">
+                <div>
+                  <dt>Actualmente</dt>
+                  <dd>eSoft<br />Experiencia profesional en Software</dd>
+                </div>
+                <div>
+                  <dt>1 año</dt>
+                  <dd>TE Connectivity<br />Intern RSD/IT</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section aria-labelledby="profile-areas-title">
+              <h3 id="profile-areas-title">DOS ÁREAS</h3>
+              <div className="profile-areas">
+                <article>
+                  <h4>SOFTWARE + PRODUCTO</h4>
+                  <ul>
+                    <li>Aplicaciones web</li>
+                    <li>Interfaces</li>
+                    <li>APIs y datos</li>
+                    <li>Arquitectura de producto</li>
+                    <li>Experiencia de usuario</li>
+                  </ul>
+                </article>
+                <article>
+                  <h4>IT + SISTEMAS</h4>
+                  <ul>
+                    <li>Soporte y operación IT</li>
+                    <li>Dispositivos e identidad</li>
+                    <li>Redes y servicios</li>
+                    <li>Dashboards</li>
+                    <li>Automatización</li>
+                  </ul>
+                </article>
               </div>
-              <div>
-                <dt>Experiencia</dt>
-                <dd>Esoft<br />TE Connectivity</dd>
-              </div>
-              <div>
-                <dt>Enfoque</dt>
-                <dd>
-                  Analizar, conectar y construir soluciones que funcionen en
-                  situaciones reales.
-                </dd>
-              </div>
-            </dl>
+            </section>
+
+            <section aria-labelledby="profile-method-title">
+              <h3 id="profile-method-title">FORMA DE TRABAJO</h3>
+              <p>Entender el contexto, separar el problema por capas, construir una solución verificable y documentar lo necesario para mantenerla.</p>
+            </section>
+
+            <section aria-labelledby="profile-work-title">
+              <h3 id="profile-work-title">TRABAJO DESTACADO</h3>
+              <ul className="profile-work">
+                <li><a href="/proyectos/kivonex"><strong>KIVONEX</strong><span>Producto full stack</span></a></li>
+                <li><a href="/proyectos/habittrack"><strong>HABITTRACK</strong><span>Experiencia web</span></a></li>
+                <li><a href="/casos/it-support"><strong>IT SUPPORT</strong><span>Operación y soporte</span></a></li>
+                <li><a href="/casos/automatizacion"><strong>AUTOMATIZACIÓN + OCR</strong><span>Prototipo funcional</span></a></li>
+              </ul>
+            </section>
 
             <div className="profile-dialog-actions">
               <a className="action action-software" href="/software">
-                Explorar Software <ArrowUpRight size={17} aria-hidden="true" />
+                Explorar Software + Producto <ArrowUpRight size={17} aria-hidden="true" />
               </a>
               <a className="action action-systems" href="/sistemas">
-                Explorar Sistemas <ArrowUpRight size={17} aria-hidden="true" />
+                Explorar IT + Sistemas <ArrowUpRight size={17} aria-hidden="true" />
               </a>
               <a className="dialog-secondary" href={githubUrl} target="_blank" rel="noreferrer">
                 GitHub <ArrowUpRight size={15} aria-hidden="true" />
+                <span className="sr-only">(se abre en otra pestaña)</span>
               </a>
               <a className="dialog-secondary" href={linkedinUrl} target="_blank" rel="noreferrer">
                 LinkedIn <ArrowUpRight size={15} aria-hidden="true" />
+                <span className="sr-only">(se abre en otra pestaña)</span>
               </a>
               <button className="dialog-text-close" type="button" onClick={closeProfile}>
                 Cerrar

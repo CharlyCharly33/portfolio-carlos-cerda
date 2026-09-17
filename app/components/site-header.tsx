@@ -1,4 +1,4 @@
-import { ArrowUpRight, Menu } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Menu } from "lucide-react";
 import { ThemeToggle } from "../theme-toggle";
 import { QuickProfileTrigger } from "./quick-profile";
 
@@ -22,7 +22,15 @@ function NavigationLinks() {
   );
 }
 
-export function SiteHeader() {
+export type SequentialLink = {
+  href: string;
+  label: string;
+};
+
+export function SiteHeader({ previous, next }: {
+  previous?: SequentialLink;
+  next?: SequentialLink;
+}) {
   return (
     <header className="site-header">
       <a className="site-brand" href="/" aria-label="Carlos Cerda, ir al inicio">
@@ -34,6 +42,22 @@ export function SiteHeader() {
       </nav>
 
       <div className="header-tools">
+        {(previous || next) && (
+          <nav className="header-case-nav" aria-label="Navegación secuencial">
+            {previous && (
+              <a href={previous.href} aria-label={`Anterior: ${previous.label}`}>
+                <ArrowLeft size={18} aria-hidden="true" />
+                <span className="sr-only">{previous.label}</span>
+              </a>
+            )}
+            {next && (
+              <a href={next.href} aria-label={`Siguiente: ${next.label}`}>
+                <ArrowRight size={18} aria-hidden="true" />
+                <span className="sr-only">{next.label}</span>
+              </a>
+            )}
+          </nav>
+        )}
         <ThemeToggle />
         <details className="mobile-nav">
           <summary>

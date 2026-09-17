@@ -26,7 +26,7 @@ export default function AutomationCasePage() {
   return (
     <QuickProfileProvider>
       <div className="automation-page">
-        <SiteHeader />
+        <SiteHeader previous={{ href: "/casos/dashboards", label: "Dashboards" }} next={{ href: "/casos/homelab", label: "Homelab" }} />
         <main>
           <section className="automation-hero" aria-labelledby="automation-title">
             <div className="automation-shell automation-hero-layout">

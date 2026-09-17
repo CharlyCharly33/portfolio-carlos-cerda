@@ -23,7 +23,7 @@ export default function HomelabCasePage() {
   return (
     <QuickProfileProvider>
       <div className="homelab-page">
-        <SiteHeader />
+        <SiteHeader previous={{ href: "/casos/automatizacion", label: "Automatización + OCR" }} />
         <main>
           <section className="homelab-hero" aria-labelledby="homelab-title">
             <div className="homelab-shell homelab-hero-layout">

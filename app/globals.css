@@ -137,13 +137,24 @@ h1, h2, p, figure { margin-top: 0; }
 .desktop-nav a:hover,
 .header-link:hover { color: var(--systems); }
 .header-tools { display: flex; align-items: center; gap: 9px; }
+.header-case-nav { display: flex; align-items: center; gap: 6px; padding-right: 9px; border-right: 1px solid var(--line); }
+.header-case-nav a {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  color: var(--foreground);
+  transition: color .2s ease, border-color .2s ease, background-color .2s ease;
+}
+.header-case-nav a:hover { border-color: var(--systems); color: var(--systems); }
 .theme-toggle {
   min-width: 80px;
   height: 36px;
   padding: 0 9px;
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 8px;
   border: 1px solid var(--line-strong);
   background: transparent;
@@ -152,7 +163,10 @@ h1, h2, p, figure { margin-top: 0; }
 }
 .theme-toggle:hover { border-color: var(--systems); background: var(--systems); color: #f7f6f2; }
 .theme-toggle span { display: grid; place-items: center; }
-.theme-toggle small { font: .75rem/1 var(--font-mono); letter-spacing: .05em; }
+html[data-theme="light"] .theme-toggle-icon-light { display: inline-flex; }
+html[data-theme="light"] .theme-toggle-icon-dark { display: none; }
+html[data-theme="dark"] .theme-toggle-icon-light { display: none; }
+html[data-theme="dark"] .theme-toggle-icon-dark { display: inline-flex; }
 .mobile-nav { display: none; position: relative; }
 
 .world-selector { scroll-margin-top: 78px; }
@@ -598,6 +612,22 @@ h1, h2, p, figure { margin-top: 0; }
 .dialog-text-close { grid-column: 1 / -1; }
 .profile-dialog-actions .dialog-secondary:hover,
 .dialog-text-close:hover { border-color: var(--systems); color: var(--systems); }
+.profile-location { margin: 8px 0 0; color: var(--muted); font-size: .9rem; }
+.profile-dialog-content section { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); }
+.profile-dialog-content section h3 { margin: 0 0 12px; color: var(--systems); font: 700 .75rem/1.4 var(--font-mono); letter-spacing: .08em; }
+.profile-dialog-content section > p { margin: 0; }
+.profile-areas { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.profile-areas article { padding: 14px; border: 1px solid var(--line); }
+.profile-areas article:first-child { border-top: 3px solid var(--software); }
+.profile-areas article:last-child { border-top: 3px solid var(--systems); }
+.profile-areas h4 { margin: 0 0 10px; font: 700 .75rem/1.4 var(--font-mono); }
+.profile-areas ul { margin: 0; padding: 0; list-style: none; }
+.profile-areas li { padding: 5px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+.profile-work { margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 9px; list-style: none; }
+.profile-work a { min-height: 64px; padding: 10px 12px; display: flex; flex-direction: column; justify-content: center; gap: 3px; border: 1px solid var(--line-strong); }
+.profile-work a:hover { border-color: var(--systems); }
+.profile-work strong { font: 700 .78rem/1.3 var(--font-mono); }
+.profile-work span { color: var(--muted); font-size: .78rem; }
 .profile-dialog[open] { animation: dialog-in .28s cubic-bezier(.2,.7,.2,1) both; }
 .profile-dialog[open]::backdrop { animation: backdrop-in .2s ease both; }
 @keyframes dialog-in { from { opacity: 0; transform: translateY(18px); } }
@@ -732,7 +762,6 @@ h1, h2, p, figure { margin-top: 0; }
 @media (max-width: 520px) {
   .site-header { padding-inline: 15px; }
   .theme-toggle { min-width: 38px; width: 38px; padding: 0; justify-content: center; }
-  .theme-toggle small { display: none; }
   .header-tools { gap: 7px; }
   .mobile-nav summary { min-width: 42px; width: 42px; padding: 0; }
   .mobile-nav summary span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
@@ -753,6 +782,8 @@ h1, h2, p, figure { margin-top: 0; }
   .profile-dialog-actions { grid-template-columns: 1fr; }
   .profile-dialog-actions .action { width: 100%; }
   .dialog-text-close { grid-column: auto; }
+  .profile-areas,
+  .profile-work { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3332,3 +3363,5 @@ h1, h2, p, figure { margin-top: 0; }
   .homelab-page .homelab-rebuild-stages button,
   .homelab-page .homelab-closing a { transition: none; }
 }
+
+/* Header sequential navigation: previous/next arrows for detail pages. */

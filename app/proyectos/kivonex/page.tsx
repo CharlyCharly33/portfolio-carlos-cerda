@@ -40,7 +40,7 @@ export default function KivonexPage() {
   return (
     <QuickProfileProvider>
       <div className="kivonex-page">
-        <SiteHeader />
+        <SiteHeader next={{ href: "/proyectos/habittrack", label: "HabitTrack" }} />
         <main>
           <section className="project-case-hero" id="producto" aria-labelledby="project-case-title">
             <div className="project-case-shell project-case-hero-layout">

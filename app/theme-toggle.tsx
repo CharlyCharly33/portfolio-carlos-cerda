@@ -6,32 +6,49 @@ import { useEffect, useState } from "react";
 type Theme = "light" | "dark";
 
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("dark");
-  const [ready, setReady] = useState(false);
+  const [theme, setTheme] = useState<Theme | null>(null);
 
+  // Sincronización única tras montar con la fuente de verdad (data-theme
+  // aplicado por el script preventivo del head). El markup renderizado es
+  // idéntico en servidor y cliente; solo cambia el label accesible.
   useEffect(() => {
     const active = document.documentElement.dataset.theme === "light" ? "light" : "dark";
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTheme(active);
-    setReady(true);
   }, []);
 
   function toggleTheme() {
-    const next: Theme = theme === "dark" ? "light" : "dark";
+    const current = document.documentElement.dataset.theme === "light" ? "light" : "dark";
+    const next: Theme = current === "dark" ? "light" : "dark";
     document.documentElement.dataset.theme = next;
-    localStorage.setItem("cc-theme", next);
+    try {
+      localStorage.setItem("cc-theme", next);
+    } catch {
+      // Sin almacenamiento disponible: el tema solo aplica a la sesión actual.
+    }
     setTheme(next);
   }
+
+  const label = theme === null
+    ? "Cambiar tema de color"
+    : theme === "dark"
+      ? "Cambiar a modo claro"
+      : "Cambiar a modo oscuro";
 
   return (
     <button
       className="theme-toggle"
       type="button"
       onClick={toggleTheme}
-      aria-label={theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
-      title={theme === "dark" ? "Modo claro" : "Modo oscuro"}
+      aria-label={label}
+      title={label}
     >
-      <span>{ready && theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}</span>
-      <small>{ready ? (theme === "dark" ? "LIGHT" : "DARK") : "THEME"}</small>
+      <span className="theme-toggle-icon theme-toggle-icon-light" aria-hidden="true">
+        <Sun size={17} aria-hidden="true" />
+      </span>
+      <span className="theme-toggle-icon theme-toggle-icon-dark" aria-hidden="true">
+        <Moon size={17} aria-hidden="true" />
+      </span>
     </button>
   );
 }

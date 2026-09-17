@@ -23,7 +23,7 @@ export default function ArmandoPage() {
   return (
     <QuickProfileProvider>
       <div className="armando-page">
-        <SiteHeader />
+        <SiteHeader previous={{ href: "/proyectos/habittrack", label: "HabitTrack" }} next={{ href: "/proyectos/focusly", label: "Focusly" }} />
         <main>
           <section className="project-case-hero" aria-labelledby="project-case-title">
             <div className="project-case-shell project-case-hero-layout">

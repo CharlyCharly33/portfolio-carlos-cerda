@@ -2347,3 +2347,262 @@ h1, h2, p, figure { margin-top: 0; }
   .armando-page .armando-routes-selectors button,
   .armando-page .armando-closing a { transition: none; }
 }
+
+/* Focusly case study: isolated acquisition-funnel system. */
+.focusly-page {
+  --focus-violet: #6535c9;
+  --focus-copper: var(--software);
+  --focus-green: var(--active);
+  --focus-panel: color-mix(in srgb, var(--software-surface) 66%, var(--surface));
+  --focus-grid: color-mix(in srgb, var(--software) 8%, transparent);
+  min-width: 320px;
+  overflow-x: clip;
+  background:
+    linear-gradient(var(--focus-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--focus-grid) 1px, transparent 1px),
+    var(--background);
+  background-size: 42px 42px;
+}
+:root[data-theme="dark"] .focusly-page { --focus-violet: #9a7bff; }
+.focusly-page main { overflow: clip; }
+.focusly-page button { cursor: pointer; }
+.focusly-page .project-case-shell { width: min(calc(100% - 56px), 1280px); margin-inline: auto; }
+.focusly-page .project-case-hero {
+  min-height: calc(100svh - 68px);
+  display: grid;
+  align-items: center;
+  border-bottom: 1px solid var(--line-strong);
+  background:
+    radial-gradient(circle at 26% 30%, var(--software-glow), transparent 26rem),
+    linear-gradient(180deg, transparent 0 64%, var(--focus-grid) 64% 64.2%, transparent 64.2%);
+}
+.focusly-page .project-case-hero-layout { padding-block: clamp(72px, 9vw, 130px); display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(50px, 7vw, 95px); align-items: center; }
+.focusly-page .project-case-hero-layout > * { min-width: 0; }
+.focusly-page .project-case-eyebrow,
+.focusly-page .project-case-section-header > p { color: var(--focus-copper); font: 750 .75rem/1.4 var(--font-mono); letter-spacing: .11em; }
+.focusly-page .project-case-hero h1 { max-width: 100%; margin: 20px 0 14px; color: var(--foreground); font-size: clamp(3rem, 5.5vw, 5.5rem); font-weight: 850; line-height: .85; letter-spacing: -.06em; }
+.focusly-page .project-case-hero h1::after { content: ""; display: block; width: 64px; height: 6px; margin-top: 16px; background: var(--focus-violet); }
+.focusly-page .project-case-statement { max-width: 700px; margin-bottom: 22px; font-size: clamp(1.4rem, 2.5vw, 2.2rem); font-weight: 730; line-height: 1.1; letter-spacing: -.03em; }
+.focusly-page .project-case-description { max-width: 680px; color: var(--muted); font-size: 1.05rem; line-height: 1.7; }
+.focusly-page .project-case-status { width: max-content; margin-top: 25px; padding: 8px 10px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid color-mix(in srgb, var(--focus-violet) 55%, var(--line)); color: var(--focus-violet); font: 750 .75rem/1 var(--font-mono); letter-spacing: .07em; }
+.focusly-page .project-case-status i { width: 8px; height: 8px; border-radius: 50%; background: var(--focus-violet); box-shadow: 0 0 10px color-mix(in srgb, var(--focus-violet) 60%, transparent); }
+.focusly-page .project-case-actions { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 8px; }
+.focusly-page .project-case-actions a { min-height: 48px; padding: 0 15px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--line-strong); background: color-mix(in srgb, var(--surface) 55%, transparent); font: 750 .75rem/1 var(--font-mono); text-transform: uppercase; transition: transform .2s ease, color .2s ease, border-color .2s ease, background .2s ease; }
+.focusly-page .project-case-actions a:first-child { border-color: var(--focus-violet); background: var(--focus-violet); color: #fff; }
+.focusly-page .project-case-actions a:hover { transform: translateY(-2px); border-color: var(--focus-violet); color: var(--focus-violet); }
+.focusly-page .project-case-actions a:first-child:hover { color: #fff; background: color-mix(in srgb, var(--focus-violet) 82%, var(--foreground)); }
+.focusly-page .project-case-drawing { border: 1px solid var(--line-strong); background: var(--focus-panel); box-shadow: 14px 14px 0 var(--focus-grid); }
+.focusly-page .project-case-drawing > header { min-height: 45px; padding-inline: 15px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); color: var(--focus-violet); font: 750 .75rem/1 var(--font-mono); }
+.focusly-page .focusly-funnel-mark { padding: 22px 18px; display: grid; gap: 6px; justify-items: center; border-bottom: 1px solid var(--line); background: radial-gradient(circle, var(--focus-grid) 1px, transparent 1.5px); background-size: 16px 16px; }
+.focusly-page .focusly-funnel-mark i { min-height: 34px; display: grid; place-items: center; background: color-mix(in srgb, var(--focus-violet) 12%, var(--surface)); border: 1px solid var(--focus-violet); color: var(--focus-violet); font: 800 .72rem/1 var(--font-mono); font-style: normal; letter-spacing: .08em; }
+.focusly-page .focusly-funnel-mark i:nth-child(1) { width: 100%; }
+.focusly-page .focusly-funnel-mark i:nth-child(2) { width: 84%; }
+.focusly-page .focusly-funnel-mark i:nth-child(3) { width: 68%; }
+.focusly-page .focusly-funnel-mark i:nth-child(4) { width: 52%; }
+.focusly-page .focusly-funnel-mark i:nth-child(5) { width: 36%; background: var(--focus-violet); color: #fff; }
+.focusly-page .project-case-drawing dl { margin: 0; }
+.focusly-page .project-case-drawing dl div { min-height: 48px; padding: 10px 15px; display: grid; grid-template-columns: minmax(110px, max-content) minmax(0, 1fr); align-items: center; gap: 10px; border-bottom: 1px solid var(--line); }
+.focusly-page .project-case-drawing dl div:last-child { border-bottom: 0; }
+.focusly-page .project-case-drawing dt { color: var(--focus-violet); font: 700 .75rem/1 var(--font-mono); }
+.focusly-page .project-case-drawing dd { min-width: 0; margin: 0; overflow-wrap: anywhere; color: var(--muted); font-size: .82rem; }
+.focusly-page .focusly-visual-link { padding: 18px; border-top: 1px solid var(--line); }
+.focusly-page .focusly-visual-link a { display: inline-flex; align-items: center; gap: 8px; color: var(--focus-violet); font: 750 .78rem/1.3 var(--font-mono); text-transform: uppercase; }
+.focusly-page .focusly-visual-link a:hover { text-decoration: underline; }
+.focusly-page .focusly-visual-link p { margin: 10px 0 0; color: var(--muted); font-size: .8rem; }
+.focusly-page .project-case-index { position: sticky; top: 68px; z-index: 35; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--background) 94%, var(--surface)); backdrop-filter: blur(14px); }
+.focusly-page .project-case-index > div { min-height: 50px; display: flex; align-items: center; gap: clamp(16px, 3vw, 38px); overflow-x: auto; scrollbar-width: thin; }
+.focusly-page .project-case-index a { flex: 0 0 auto; color: var(--muted); font: 700 .75rem/1 var(--font-mono); text-transform: uppercase; }
+.focusly-page .project-case-index a:hover { color: var(--focus-violet); }
+
+.focusly-page .focusly-purpose,
+.focusly-page .focusly-funnel,
+.focusly-page .focusly-architecture,
+.focusly-page .focusly-auth,
+.focusly-page .focusly-matrix,
+.focusly-page .focusly-decisions,
+.focusly-page .focusly-evolution,
+.focusly-page .focusly-current,
+.focusly-page .focusly-closing { padding-block: clamp(90px, 11vw, 145px); scroll-margin-top: 110px; border-bottom: 1px solid var(--line-strong); }
+.focusly-page .project-case-section-header { max-width: 930px; margin-bottom: clamp(46px, 6vw, 72px); display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 35px; }
+.focusly-page .project-case-section-header > p { margin: 7px 0 0; }
+.focusly-page .project-case-section-header h2 { margin: 0; font-size: clamp(2.6rem, 5vw, 5rem); line-height: .94; letter-spacing: -.055em; }
+.focusly-page .focusly-section-intro { max-width: 760px; margin: -30px 0 45px 215px; color: var(--muted); font-size: 1rem; }
+.focusly-page .focusly-purpose { background: color-mix(in srgb, var(--software-surface) 40%, transparent); }
+.focusly-page .focusly-purpose-ledger { display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; }
+.focusly-page .focusly-purpose-ledger article { padding: clamp(26px, 4vw, 40px); border: 1px solid var(--line-strong); background: var(--focus-panel); }
+.focusly-page .focusly-purpose-ledger article + article { border-style: dashed; }
+.focusly-page .focusly-purpose-ledger h3 { margin: 0 0 20px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: .02em; }
+.focusly-page .focusly-purpose-ledger ul { margin: 0; padding: 0; list-style: none; }
+.focusly-page .focusly-purpose-ledger li { padding: 10px 0 10px 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+.focusly-page .focusly-purpose-ledger li::before { content: "+"; margin-left: -20px; margin-right: 10px; color: var(--focus-green); font-family: var(--font-mono); }
+.focusly-page .focusly-purpose-ledger article + article li::before { content: "○"; color: var(--muted); }
+.focusly-page .focusly-purpose-ledger article p { margin: 18px 0 0; padding: 14px; border-left: 3px solid var(--focus-violet); background: color-mix(in srgb, var(--focus-violet) 7%, transparent); color: var(--muted); font-size: .85rem; }
+
+.focusly-page .focusly-funnel-board,
+.focusly-page .focusly-architecture-board,
+.focusly-page .focusly-auth-board { border: 1px solid var(--line-strong); background: var(--focus-panel); box-shadow: 14px 14px 0 var(--focus-grid); }
+.focusly-page .focusly-representation-label { min-height: 46px; margin: 0; padding: 0 clamp(24px, 4vw, 44px); display: flex; align-items: center; border-bottom: 1px solid var(--line); color: var(--focus-violet); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .07em; }
+.focusly-page .focusly-funnel-stages { padding: clamp(24px, 4vw, 42px); display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; }
+.focusly-page .focusly-funnel-stages button { min-width: 0; min-height: 118px; padding: 18px 12px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; border: 1px solid var(--line-strong); border-right: 0; background: var(--surface); text-align: left; transition: border-color .2s ease, background .2s ease, box-shadow .2s ease; }
+.focusly-page .focusly-funnel-stages button:last-child { border-right: 1px solid var(--line-strong); }
+.focusly-page .focusly-funnel-stages button > span { color: var(--focus-violet); font: 750 .75rem/1 var(--font-mono); }
+.focusly-page .focusly-funnel-stages button strong { font: 800 .85rem/1.25 var(--font-mono); text-transform: uppercase; }
+.focusly-page .focusly-funnel-stages button[aria-pressed="true"] { border-color: var(--focus-violet); background: color-mix(in srgb, var(--focus-violet) 10%, var(--surface)); box-shadow: inset 0 -4px 0 var(--focus-violet); z-index: 2; }
+.focusly-page .focusly-funnel-output { padding: 26px clamp(24px, 4vw, 44px); border-top: 1px solid var(--line); background: color-mix(in srgb, var(--background) 60%, transparent); }
+.focusly-page .focusly-funnel-output > span { color: var(--focus-violet); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .06em; }
+.focusly-page .focusly-funnel-output dl { margin: 16px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+.focusly-page .focusly-funnel-output dl div { padding: 12px 0; border-top: 1px solid var(--line); }
+.focusly-page .focusly-funnel-output dt { margin-bottom: 6px; color: var(--focus-copper); font: 750 .75rem/1 var(--font-mono); text-transform: uppercase; }
+.focusly-page .focusly-funnel-output dd { margin: 0; color: var(--muted); font-size: .9rem; }
+
+.focusly-page .focusly-architecture { background: var(--background); }
+.focusly-page .focusly-arch-layers { padding: clamp(24px, 4vw, 42px); display: flex; flex-direction: column; }
+.focusly-page .focusly-arch-layers button { min-height: 84px; padding: 16px 18px; display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 12px; border: 1px solid var(--line-strong); border-bottom: 0; background: var(--surface); text-align: left; transition: border-color .2s ease, background .2s ease; }
+.focusly-page .focusly-arch-layers button:last-child { border-bottom: 1px solid var(--line-strong); }
+.focusly-page .focusly-arch-layers button > span { color: var(--focus-violet); font: 750 .75rem/1 var(--font-mono); }
+.focusly-page .focusly-arch-layers button strong { font: 800 .9rem/1.25 var(--font-mono); text-transform: uppercase; }
+.focusly-page .focusly-arch-layers button em { color: var(--muted); font: 700 .75rem/1 var(--font-mono); font-style: normal; }
+.focusly-page .focusly-arch-layers button[aria-pressed="true"] { border-color: var(--focus-violet); background: color-mix(in srgb, var(--focus-violet) 9%, var(--surface)); box-shadow: inset 4px 0 0 var(--focus-violet); }
+.focusly-page .focusly-arch-layers button[aria-pressed="true"] em { color: var(--focus-violet); }
+.focusly-page .focusly-arch-output { padding: 24px clamp(24px, 4vw, 44px); border-top: 1px solid var(--line); background: color-mix(in srgb, var(--background) 60%, transparent); }
+.focusly-page .focusly-arch-output > span { color: var(--focus-violet); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .07em; }
+.focusly-page .focusly-arch-output p { max-width: 800px; margin: 12px 0 16px; }
+.focusly-page .focusly-arch-output ul { margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; list-style: none; }
+.focusly-page .focusly-arch-output li { padding: 7px 9px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--muted); font: 700 .75rem/1.3 var(--font-mono); }
+.focusly-page .focusly-env-split { margin: 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line-strong); }
+.focusly-page .focusly-env-split p { margin: 0; padding: 20px clamp(24px, 4vw, 44px); color: var(--muted); font: 700 .8rem/1.5 var(--font-mono); }
+.focusly-page .focusly-env-split p + p { border-left: 1px solid var(--line-strong); }
+.focusly-page .focusly-env-split span { display: block; margin-bottom: 8px; font-size: .72rem; letter-spacing: .08em; }
+.focusly-page .focusly-env-split p:first-child span { color: var(--focus-green); }
+.focusly-page .focusly-env-split p + p span { color: var(--focus-copper); }
+.focusly-page .focusly-env-note { margin-top: 18px; padding: 20px 24px; border-left: 3px solid var(--focus-violet); background: var(--focus-panel); color: var(--muted); }
+
+.focusly-page .focusly-auth { background: radial-gradient(circle at 78% 35%, var(--software-glow), transparent 28rem), var(--software-surface); }
+.focusly-page .focusly-auth-phases { padding: clamp(24px, 4vw, 42px) clamp(24px, 4vw, 42px) 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.focusly-page .focusly-auth-phases button { min-height: 64px; padding: 0 10px; border: 1px solid var(--line-strong); background: var(--surface); font: 750 .75rem/1.2 var(--font-mono); text-transform: uppercase; transition: border-color .2s ease, background .2s ease, color .2s ease; }
+.focusly-page .focusly-auth-phases button[aria-pressed="true"] { border-color: var(--focus-violet); background: var(--focus-violet); color: #fff; }
+.focusly-page .focusly-auth-output { padding: 26px clamp(24px, 4vw, 44px); }
+.focusly-page .focusly-auth-output > span { color: var(--focus-violet); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .07em; }
+.focusly-page .focusly-auth-output ol { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.focusly-page .focusly-auth-output ol li { padding: 14px 16px 14px 40px; position: relative; border: 1px solid var(--line); background: color-mix(in srgb, var(--background) 55%, transparent); font-weight: 700; }
+.focusly-page .focusly-auth-output ol li::before { content: "→"; position: absolute; left: 14px; color: var(--focus-violet); font-family: var(--font-mono); }
+.focusly-page .focusly-auth-ledger { margin-top: 18px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; }
+.focusly-page .focusly-auth-ledger article { padding: clamp(24px, 3vw, 36px); border: 1px solid var(--line-strong); background: var(--focus-panel); }
+.focusly-page .focusly-auth-ledger h3 { margin: 0 0 16px; font-size: 1.1rem; }
+.focusly-page .focusly-auth-ledger ul { margin: 0; padding: 0; list-style: none; }
+.focusly-page .focusly-auth-ledger li { padding: 9px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .86rem; font-family: var(--font-mono); }
+.focusly-page .focusly-auth-ledger article + article li { font-family: var(--font-sans); }
+
+.focusly-page .focusly-matrix-map { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
+.focusly-page .focusly-zone { border: 1px solid var(--line-strong); background: var(--focus-panel); }
+.focusly-page .focusly-zone > header { min-height: 78px; padding: 16px 20px; display: grid; grid-template-columns: 40px 1fr; align-items: center; gap: 12px; border-bottom: 1px solid var(--line); }
+.focusly-page .focusly-zone > header > span { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid currentColor; font: 800 .9rem/1 var(--font-mono); }
+.focusly-page .focusly-zone > header p { margin: 0 0 4px; font: 700 .75rem/1.3 var(--font-mono); }
+.focusly-page .focusly-zone > header h3 { margin: 0; font-size: 1.1rem; }
+.focusly-page .focusly-zone ul { margin: 0; padding: 10px 20px 20px; display: flex; flex-wrap: wrap; gap: 7px; list-style: none; }
+.focusly-page .focusly-zone li { padding: 7px 9px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--muted); font: 700 .75rem/1.3 var(--font-mono); }
+.focusly-page .focusly-zone.is-demo { border-top: 4px solid var(--focus-green); }
+.focusly-page .focusly-zone.is-demo > header { color: var(--focus-green); }
+.focusly-page .focusly-zone.is-backend { border-top: 4px solid var(--focus-violet); }
+.focusly-page .focusly-zone.is-backend > header { color: var(--focus-violet); }
+.focusly-page .focusly-zone.is-ilustrado { border-top: 4px dashed var(--line-strong); }
+.focusly-page .focusly-zone.is-ilustrado > header { color: var(--muted); }
+.focusly-page .focusly-zone.is-next { border-top: 4px dashed var(--focus-copper); }
+.focusly-page .focusly-zone.is-next > header { color: var(--focus-copper); }
+
+.focusly-page .focusly-decisions { background: var(--software-surface); }
+.focusly-page .focusly-decision-register { margin: 0; padding: 0; border-top: 1px solid var(--line-strong); list-style: none; }
+.focusly-page .focusly-decision-register > li { display: grid; grid-template-columns: 260px minmax(0, 1fr) minmax(0, 1fr); border-bottom: 1px solid var(--line-strong); }
+.focusly-page .focusly-decision-register > li > header { padding: 26px; border-right: 1px solid var(--line); }
+.focusly-page .focusly-decision-register > li > header span { color: var(--focus-violet); font: 750 .75rem/1 var(--font-mono); letter-spacing: .08em; }
+.focusly-page .focusly-decision-register h3 { margin: 10px 0 0; font-size: 1.2rem; }
+.focusly-page .focusly-decision-register dl { margin: 0; display: contents; }
+.focusly-page .focusly-decision-register dl div { padding: 26px; }
+.focusly-page .focusly-decision-register dl div + div { border-left: 1px solid var(--line); }
+.focusly-page .focusly-decision-register dt { margin-bottom: 8px; color: var(--focus-copper); font: 750 .75rem/1 var(--font-mono); text-transform: uppercase; }
+.focusly-page .focusly-decision-register dd { margin: 0; color: var(--muted); }
+
+.focusly-page .focusly-evolution-track { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; list-style: none; }
+.focusly-page .focusly-evolution-track > li { min-width: 0; padding: 20px 18px; border: 1px solid var(--line-strong); background: var(--focus-panel); }
+.focusly-page .focusly-evolution-track > li:nth-child(n+5) { grid-column: span 1; }
+.focusly-page .focusly-evolution-track > li > span { color: var(--focus-violet); font: 750 .75rem/1.3 var(--font-mono); text-transform: uppercase; }
+.focusly-page .focusly-evolution-track > li > i { height: 6px; margin: 16px 0; display: block; background: var(--focus-violet); }
+.focusly-page .focusly-evolution-track ul { margin: 0; padding: 0; list-style: none; }
+.focusly-page .focusly-evolution-track ul li { padding: 4px 0; color: var(--muted); font-size: .82rem; }
+.focusly-page .focusly-evolution-track .is-next { border-style: dashed; }
+.focusly-page .focusly-evolution-track .is-next > span { color: var(--muted); }
+.focusly-page .focusly-evolution-track .is-next > i { background: repeating-linear-gradient(90deg, var(--line-strong) 0 6px, transparent 6px 10px); }
+
+.focusly-page .focusly-current { background: var(--systems-surface); }
+.focusly-page .focusly-current-board { display: grid; grid-template-columns: 1.1fr .9fr; border: 1px solid var(--line-strong); background: color-mix(in srgb, var(--surface) 70%, transparent); }
+.focusly-page .focusly-current-board article { padding: clamp(25px, 4vw, 42px); }
+.focusly-page .focusly-current-board article + article { border-left: 1px solid var(--line-strong); }
+.focusly-page .focusly-current-board h3 { margin: 0; font-size: 1.2rem; text-transform: uppercase; letter-spacing: .02em; }
+.focusly-page .focusly-current-board ul { margin: 22px 0 0; padding: 0; list-style: none; }
+.focusly-page .focusly-current-board li { padding: 10px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
+.focusly-page .focusly-tech-ledger { margin-top: 18px; border: 1px solid var(--line-strong); background: var(--focus-panel); }
+.focusly-page .focusly-tech-ledger h3 { margin: 0; padding: 18px 22px; border-bottom: 1px solid var(--line); color: var(--focus-violet); font: 750 .75rem/1.3 var(--font-mono); text-transform: uppercase; letter-spacing: .07em; }
+.focusly-page .focusly-tech-ledger ul { margin: 0; padding: 8px 22px 20px; display: flex; flex-wrap: wrap; gap: 7px; list-style: none; }
+.focusly-page .focusly-tech-ledger li { padding: 7px 9px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--muted); font: 700 .75rem/1.3 var(--font-mono); }
+.focusly-page .focusly-status-note { margin-top: 18px; padding: 22px 25px; border: 1px solid var(--focus-violet); background: color-mix(in srgb, var(--focus-violet) 7%, var(--surface)); color: var(--muted); }
+.focusly-page .focusly-status-note strong { color: var(--foreground); }
+.focusly-page .focusly-closing { background: radial-gradient(circle at 76% 40%, var(--software-glow), transparent 26rem), var(--focus-panel); }
+.focusly-page .focusly-closing > div { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 15px 70px; align-items: end; }
+.focusly-page .focusly-closing > div > p:first-child { grid-column: 1; color: var(--focus-violet); font: 750 .75rem/1.3 var(--font-mono); letter-spacing: .09em; }
+.focusly-page .focusly-closing h2 { grid-column: 1; margin: 0; font-size: clamp(2.6rem, 5vw, 5rem); line-height: .94; letter-spacing: -.055em; }
+.focusly-page .focusly-closing > div > p:nth-of-type(2) { grid-column: 1; max-width: 680px; margin: 5px 0 0; color: var(--muted); }
+.focusly-page .focusly-closing a { grid-column: 2; grid-row: 2 / 4; min-height: 52px; padding: 0 18px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--focus-violet); color: var(--focus-violet); font: 750 .75rem/1.3 var(--font-mono); text-transform: uppercase; }
+.focusly-page .focusly-closing a:hover { background: var(--focus-violet); color: #fff; }
+
+@media (max-width: 1050px) {
+  .focusly-page .project-case-hero-layout { grid-template-columns: 1fr; }
+  .focusly-page .project-case-drawing { width: min(640px, 100%); }
+  .focusly-page .focusly-funnel-stages { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .focusly-page .focusly-funnel-stages button { border-right: 1px solid var(--line-strong); }
+  .focusly-page .focusly-matrix-map { grid-template-columns: 1fr; }
+  .focusly-page .focusly-decision-register > li { grid-template-columns: 200px 1fr; }
+  .focusly-page .focusly-decision-register dl { display: grid; grid-template-columns: 1fr 1fr; grid-column: 2; }
+  .focusly-page .focusly-evolution-track { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 780px) {
+  .focusly-page .project-case-shell { width: min(calc(100% - 30px), 1280px); }
+  .focusly-page .project-case-hero { min-height: auto; }
+  .focusly-page .project-case-hero-layout { padding-block: 60px 52px; gap: 36px; }
+  .focusly-page .project-case-hero h1 { font-size: clamp(2.6rem, 14vw, 4.2rem); }
+  .focusly-page .project-case-actions a { flex: 1 1 200px; }
+  .focusly-page .project-case-section-header { grid-template-columns: 1fr; gap: 12px; }
+  .focusly-page .project-case-section-header h2 { font-size: clamp(2.5rem, 11vw, 4rem); }
+  .focusly-page .focusly-section-intro { margin: -25px 0 35px; }
+  .focusly-page .focusly-purpose-ledger { grid-template-columns: 1fr; }
+  .focusly-page .focusly-funnel-stages { grid-template-columns: 1fr; }
+  .focusly-page .focusly-funnel-stages button { min-height: 76px; border-right: 1px solid var(--line-strong); }
+  .focusly-page .focusly-funnel-output dl { grid-template-columns: 1fr; }
+  .focusly-page .focusly-env-split { grid-template-columns: 1fr; }
+  .focusly-page .focusly-env-split p + p { border-top: 1px solid var(--line-strong); border-left: 0; }
+  .focusly-page .focusly-auth-phases { grid-template-columns: 1fr; }
+  .focusly-page .focusly-auth-phases button { min-height: 58px; }
+  .focusly-page .focusly-auth-ledger { grid-template-columns: 1fr; }
+  .focusly-page .focusly-decision-register > li { grid-template-columns: 1fr; }
+  .focusly-page .focusly-decision-register dl { grid-template-columns: 1fr; grid-column: auto; }
+  .focusly-page .focusly-decision-register dl div + div { border-top: 1px solid var(--line); border-left: 0; }
+  .focusly-page .focusly-evolution-track { grid-template-columns: 1fr; }
+  .focusly-page .focusly-current-board { grid-template-columns: 1fr; }
+  .focusly-page .focusly-current-board article + article { border-top: 1px solid var(--line-strong); border-left: 0; }
+  .focusly-page .focusly-closing > div { grid-template-columns: 1fr; }
+  .focusly-page .focusly-closing a { grid-column: 1; grid-row: auto; width: 100%; margin-top: 22px; }
+}
+
+@media (max-width: 480px) {
+  .focusly-page .project-case-actions a { box-sizing: border-box; width: 100%; flex-basis: 100%; }
+  .focusly-page .project-case-index > div { width: calc(100% - 20px); }
+  .focusly-page .focusly-funnel-mark i { min-height: 30px; font-size: .68rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .focusly-page .project-case-actions a,
+  .focusly-page .focusly-funnel-stages button,
+  .focusly-page .focusly-arch-layers button,
+  .focusly-page .focusly-auth-phases button,
+  .focusly-page .focusly-closing a { transition: none; }
+}

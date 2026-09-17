@@ -59,7 +59,7 @@ export default function Home() {
               title="Software + Producto"
               description="Convierto necesidades en productos digitales claros, funcionales y preparados para crecer."
               areas={["DESARROLLO WEB", "INTERFACES", "APIS + DATOS"]}
-              experience="Esoft y proyectos personales"
+              experience="eSoft · Actualmente"
               href="/software"
               action="Explorar Software"
             />
@@ -70,7 +70,7 @@ export default function Home() {
               title="IT + Sistemas"
               description="Mejoro la tecnología que conecta personas, datos, dispositivos y operaciones."
               areas={["SOPORTE", "INFRAESTRUCTURA", "DATOS + AUTOMATIZACIÓN"]}
-              experience="TE Connectivity"
+              experience="TE Connectivity · 1 año"
               href="/sistemas"
               action="Explorar Sistemas"
             />

@@ -97,7 +97,6 @@ export default function KivonexPage() {
                   <ul className="kivonex-principles">{productPrinciples.map((item) => <li key={item}>{item}</li>)}</ul>
                 </article>
               </div>
-              <aside className="kivonex-participation reveal"><span>PARTICIPACIÓN DE CARLOS</span><h3>Dirección de producto y desarrollo full stack</h3><p>Definición de visión y alcance, priorización del MVP, diseño de arquitectura, modelado de datos, implementación frontend y backend, reglas de negocio, pruebas, documentación técnica y control de versiones.</p></aside>
               <div className="kivonex-tech-ledger reveal" aria-label="Tecnologías verificadas de Kivonex">
                 {technologies.map((group) => <section key={group.area}><h3>{group.area}</h3><ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul></section>)}
               </div>

@@ -19,7 +19,6 @@ export type SystemsCase = {
   contextLabel: string;
   description: string;
   areas: string[];
-  participation: string;
   result: string;
   stages: SystemsStage[];
   modules?: string[];
@@ -36,8 +35,6 @@ export const systemsCases: SystemsCase[] = [
     description:
       "Atención estructurada de incidencias y solicitudes, desde la lectura del contexto hasta la validación con la persona usuaria.",
     areas: ["Soporte", "Diagnóstico", "Operación", "Documentación"],
-    participation:
-      "Análisis inicial, resolución o canalización responsable, seguimiento y registro de conocimiento reutilizable.",
     result:
       "Una operación de soporte más clara, trazable y orientada a recuperar la continuidad del trabajo.",
     stages: [
@@ -58,8 +55,6 @@ export const systemsCases: SystemsCase[] = [
     description:
       "Transformación de información operativa en vistas comprensibles para seguimiento, revisión y toma de decisiones.",
     areas: ["Datos", "Calidad", "Visualización", "Comunicación"],
-    participation:
-      "Preparación de datos, definición de criterios, construcción de vistas y revisión con las personas involucradas.",
     result:
       "Lecturas consistentes de la operación, con atención a la calidad del dato y al propósito de cada visualización.",
     stages: [
@@ -80,8 +75,6 @@ export const systemsCases: SystemsCase[] = [
     description:
       "Exploración de flujos asistidos para reducir captura repetitiva, estructurar documentos y conservar puntos de revisión humana.",
     areas: ["Automatización", "OCR", "Validación", "Flujos"],
-    participation:
-      "Análisis del proceso, diseño del flujo, manejo de excepciones y evaluación de resultados antes de su uso.",
     result:
       "Procesos repetibles con controles visibles, intervención humana definida y mejor manejo de excepciones.",
     stages: [
@@ -102,8 +95,6 @@ export const systemsCases: SystemsCase[] = [
     description:
       "Entorno controlado para aprender operación de servicios, redes, observabilidad y recuperación sin confundir práctica personal con experiencia empresarial.",
     areas: ["Linux", "Servicios", "Redes", "Observabilidad"],
-    participation:
-      "Diseño, despliegue, mantenimiento y documentación del laboratorio con énfasis en aprendizaje reproducible.",
     result:
       "Un espacio seguro para probar decisiones de infraestructura, documentar fallos y fortalecer criterios operativos.",
     modules: ["HomeShield DNS", "Servicios internos", "Monitoreo", "Respaldo y recuperación"],

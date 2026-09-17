@@ -242,11 +242,6 @@ function SoftwareProjectCard({
           </div>
         )}
 
-        <div className="project-participation">
-          <span>PARTICIPACIÓN</span>
-          <p>{project.participation}</p>
-        </div>
-
         <div className="project-card-footer">
           <span className="project-filter-state">{filterState}</span>
           <a href={`/proyectos/${project.slug}`}>

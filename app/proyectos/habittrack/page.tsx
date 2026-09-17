@@ -32,19 +32,6 @@ const productPrinciples = [
   "Complejidad técnica localizada",
 ];
 
-const participation = [
-  "Definición del enfoque",
-  "Arquitectura de rutas",
-  "Diseño responsive",
-  "Componentización",
-  "Interacciones",
-  "Modelado del hábito",
-  "Migración tecnológica",
-  "Documentación",
-  "Publicación",
-  "Control de versiones",
-];
-
 function ExternalLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
     <a href={href} target="_blank" rel="noreferrer">
@@ -126,11 +113,6 @@ export default function HabitTrackPage() {
                   <ul className="habittrack-principles">{productPrinciples.map((item) => <li key={item}>{item}</li>)}</ul>
                 </article>
               </div>
-              <aside className="habittrack-participation reveal">
-                <span>PARTICIPACIÓN DE CARLOS</span>
-                <h3>Diseño del producto y desarrollo frontend</h3>
-                <ul>{participation.map((item) => <li key={item}>{item}</li>)}</ul>
-              </aside>
             </div>
           </section>
 

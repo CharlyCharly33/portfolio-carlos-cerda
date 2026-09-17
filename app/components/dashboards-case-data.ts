@@ -72,17 +72,6 @@ export const flowStages: DataFlowStage[] = [
   },
 ];
 
-export const participation = [
-  "Comprensión de la necesidad",
-  "Revisión general de las fuentes disponibles",
-  "Preparación y transformación",
-  "Organización del modelo",
-  "Construcción de indicadores",
-  "Diseño de la lectura visual",
-  "Validación de interpretación",
-  "Disponibilidad interna",
-];
-
 export const toolGroups = [
   { area: "Fuentes y colaboración", items: ["SharePoint", "Excel"] },
   { area: "Preparación", items: ["Power Query", "Excel"] },

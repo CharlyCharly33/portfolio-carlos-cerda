@@ -5,7 +5,6 @@ import {
   confirmedState,
   learnings,
   notClaimedState,
-  participation,
   readingJourney,
   toolGroups,
   visualizationPrinciples,
@@ -55,7 +54,6 @@ export default function DashboardsCasePage() {
                   <div><dt>EMPRESA</dt><dd>TE Connectivity</dd></div>
                   <div><dt>CARGO</dt><dd>Intern RSD/IT</dd></div>
                   <div><dt>TIPO</dt><dd>Experiencia profesional</dd></div>
-                  <div><dt>PARTICIPACIÓN</dt><dd>Preparación, organización, modelado y visualización de información operativa</dd></div>
                   <div><dt>HERRAMIENTAS</dt><dd>Power BI, Power Query, Excel y SharePoint</dd></div>
                   <div><dt>ESTADO</dt><dd>Uso interno conocido</dd></div>
                   <div><dt>EVIDENCIA</dt><dd>No pública por confidencialidad</dd></div>
@@ -82,10 +80,6 @@ export default function DashboardsCasePage() {
                   <h3>Respuesta</h3>
                   <p>Organizar un recorrido de transformación que permita construir una lectura visual clara sin perder trazabilidad sobre el origen y preparación de la información.</p>
                 </article>
-              </div>
-              <div className="dashboards-participation reveal">
-                <h3>Participación de Carlos</h3>
-                <ul>{participation.map((item) => <li key={item}>{item}</li>)}</ul>
               </div>
             </div>
           </section>

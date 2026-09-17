@@ -127,7 +127,6 @@ function SystemsCaseCard({ item }: { item: SystemsCase }) {
         <ul aria-label={`Áreas de ${item.title}`}>{item.areas.map((area) => <li key={area}>{area}</li>)}</ul>
         {item.modules && <div className="systems-case-modules"><span>MÓDULOS DEL LABORATORIO</span>{item.modules.map((module) => <code key={module}>{module}</code>)}</div>}
         <dl>
-          <div><dt>Participación</dt><dd>{item.participation}</dd></div>
           <div><dt>Enfoque de resultado</dt><dd>{item.result}</dd></div>
         </dl>
         <a href={`/casos/${item.slug}`}>Abrir dossier <ArrowUpRight size={17} aria-hidden="true" /></a>

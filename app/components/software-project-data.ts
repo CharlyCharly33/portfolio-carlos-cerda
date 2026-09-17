@@ -13,7 +13,6 @@ export type SoftwareProject = {
   type: string;
   description: string;
   areas: SoftwareArea[];
-  participation: string;
   status: string;
   technicalTags?: string[];
 };
@@ -36,8 +35,6 @@ export const softwareProjects: SoftwareProject[] = [
     description:
       "Plataforma en evolución para apoyar la administración y operación de gimnasios mediante módulos conectados.",
     areas: ["Producto", "Frontend", "Backend", "Datos", "Interfaces", "UX"],
-    participation:
-      "Dirección del producto, arquitectura, desarrollo y revisión técnica.",
     status: "En desarrollo activo",
   },
   {
@@ -48,8 +45,6 @@ export const softwareProjects: SoftwareProject[] = [
     description:
       "Producto personal orientado al seguimiento de hábitos y a la construcción de una experiencia clara y utilizable.",
     areas: ["Producto", "Frontend", "Datos", "Interfaces", "UX"],
-    participation:
-      "Definición del producto, desarrollo, organización técnica y evolución funcional.",
     status: "Producto en evolución",
   },
   {
@@ -61,8 +56,6 @@ export const softwareProjects: SoftwareProject[] = [
       "Entorno personal de experimentación con agentes, MCP, contexto, permisos, seguridad y automatización supervisada.",
     areas: ["Backend", "Datos", "Producto"],
     technicalTags: ["IA", "AGENTES", "MCP", "SEGURIDAD", "AUTOMATIZACIÓN"],
-    participation:
-      "Diseño del enfoque, experimentación, definición de permisos y validación de comportamientos.",
     status: "Laboratorio técnico",
   },
   {
@@ -73,8 +66,6 @@ export const softwareProjects: SoftwareProject[] = [
     description:
       "Landing page desarrollada como práctica profesional para trabajar interfaz, comunicación visual, responsive y refinamiento de experiencia.",
     areas: ["Frontend", "Interfaces", "UX"],
-    participation:
-      "Implementación frontend, ajustes visuales, responsive y refinamiento de interacción.",
     status: "Caso frontend",
   },
 ];

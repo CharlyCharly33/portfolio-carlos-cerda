@@ -7,7 +7,6 @@
   // Fijada a la fecha generada por vinext 0.0.50 para este proyecto.
   // No actualizar sin revisar cambios de comportamiento en Workers.
   "compatibility_date": "2026-05-15",
-  "compatibility_flags": ["nodejs_compat"],
   // Assets estáticos producidos por `npx vinext build` (dist/client).
   // El Worker los sirve mediante el binding ASSETS y resuelve las rutas SSR.
   "assets": {

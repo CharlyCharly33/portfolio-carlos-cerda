@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type ProfilePortraitProps = {
   className?: string;
   objectPosition?: string;
@@ -14,10 +16,14 @@ export function ProfilePortrait({
 }: ProfilePortraitProps) {
   return (
     <div className={`profile-portrait ${className}`.trim()}>
-      <img
+      <Image
         src={profilePortrait.src}
         alt={profilePortrait.alt}
-        style={{ objectPosition }}
+        fill
+        unoptimized
+        priority
+        sizes="(max-width: 520px) 70vw, 400px"
+        style={{ objectFit: "contain", objectPosition }}
       />
     </div>
   );

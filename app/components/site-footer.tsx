@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function SiteFooter() {
   return (
     <footer className="site-footer">
@@ -8,7 +10,7 @@ export function SiteFooter() {
         <a href="https://github.com/CharlyCharly33" target="_blank" rel="noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/carlos-alberto-cerda-sierra-266604256/" target="_blank" rel="noreferrer">LinkedIn</a>
       </nav>
-      <a href="/">Inicio</a>
+      <Link href="/">Inicio</Link>
     </footer>
   );
 }

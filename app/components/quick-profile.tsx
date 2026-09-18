@@ -5,6 +5,7 @@ import {
   createContext,
   type ReactNode,
   useContext,
+  useEffect,
   useRef,
 } from "react";
 
@@ -30,6 +31,38 @@ export function QuickProfileProvider({ children }: { children: ReactNode }) {
   function restoreFocus() {
     triggerRef.current?.focus();
   }
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) {
+      return;
+    }
+    function trapTab(event: KeyboardEvent) {
+      if (event.key !== "Tab") {
+        return;
+      }
+      const focusables = Array.from(
+        dialog.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
+      ).filter((element) => element.getClientRects().length > 0);
+      if (focusables.length === 0) {
+        event.preventDefault();
+        return;
+      }
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+    dialog.addEventListener("keydown", trapTab);
+    return () => dialog.removeEventListener("keydown", trapTab);
+  }, []);
 
   return (
     <QuickProfileContext.Provider value={openProfile}>

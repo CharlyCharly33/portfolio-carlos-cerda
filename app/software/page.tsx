@@ -1,4 +1,5 @@
 import { ArrowDown, ArrowLeft, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { MotionEffects } from "../motion-effects";
 import { QuickProfileProvider } from "../components/quick-profile";
 import { SiteFooter } from "../components/site-footer";
@@ -29,9 +30,9 @@ export default function SoftwarePage() {
                 <a className="software-action" href="/sistemas">
                   Cambiar a Sistemas <ArrowRight size={17} aria-hidden="true" />
                 </a>
-                <a className="software-text-link" href="/">
+                <Link className="software-text-link" href="/">
                   <ArrowLeft size={15} aria-hidden="true" /> Volver al inicio
-                </a>
+                </Link>
               </div>
             </div>
 

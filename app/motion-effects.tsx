@@ -1,34 +1,51 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
+function observeReveals(): () => void {
+  const root = document.documentElement;
+  root.classList.add("motion-ready");
+
+  const elements = Array.from(
+    document.querySelectorAll<HTMLElement>(".reveal, .reveal-line"),
+  );
+
+  if (elements.length === 0) {
+    return () => {};
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        } else {
+          entry.target.classList.remove("is-visible");
+        }
+      });
+    },
+    { threshold: 0.16, rootMargin: "-6% 0px -8%" },
+  );
+
+  elements.forEach((element) => observer.observe(element));
+
+  return () => {
+    observer.disconnect();
+  };
+}
+
 export function MotionEffects() {
+  const pathname = usePathname();
+
   useEffect(() => {
-    const root = document.documentElement;
-    root.classList.add("motion-ready");
+    const disconnect = observeReveals();
+    return disconnect;
+  }, [pathname]);
 
-    const elements = Array.from(
-      document.querySelectorAll<HTMLElement>(".reveal, .reveal-line"),
-    );
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-          } else {
-            entry.target.classList.remove("is-visible");
-          }
-        });
-      },
-      { threshold: 0.16, rootMargin: "-6% 0px -8%" },
-    );
-
-    elements.forEach((element) => observer.observe(element));
-
+  useEffect(() => {
     return () => {
-      observer.disconnect();
-      root.classList.remove("motion-ready");
+      document.documentElement.classList.remove("motion-ready");
     };
   }, []);
 

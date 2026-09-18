@@ -1,5 +1,5 @@
 {
-  "name": "site-creator-vinext-starter",
+  "name": "portfolio-carlos-cerda",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -12,6 +12,8 @@
     "start": "vinext start",
     "test": "npm run build && node --test tests/*.test.mjs",
     "lint": "bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next",
+    "deploy:dry-run": "npx vinext build && npx wrangler deploy --dry-run",
+    "deploy": "npx vinext build && npx wrangler deploy",
     "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate"
   },
   "dependencies": {
